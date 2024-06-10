@@ -81,6 +81,14 @@
         "documentation": {}
     },
     {
+        "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "String",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -110,6 +118,182 @@
         "description": "core",
         "isExtraImport": true,
         "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "async_sessionmaker",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_async_engine",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -177,43 +361,11 @@
         "documentation": {}
     },
     {
-        "label": "AsyncSession",
-        "importPath": "sqlalchemy.ext.asyncio",
-        "description": "sqlalchemy.ext.asyncio",
+        "label": "router",
+        "importPath": "api_v1",
+        "description": "api_v1",
         "isExtraImport": true,
-        "detail": "sqlalchemy.ext.asyncio",
-        "documentation": {}
-    },
-    {
-        "label": "async_sessionmaker",
-        "importPath": "sqlalchemy.ext.asyncio",
-        "description": "sqlalchemy.ext.asyncio",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.ext.asyncio",
-        "documentation": {}
-    },
-    {
-        "label": "create_async_engine",
-        "importPath": "sqlalchemy.ext.asyncio",
-        "description": "sqlalchemy.ext.asyncio",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.ext.asyncio",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "api_v1",
         "documentation": {}
     },
     {
@@ -289,6 +441,51 @@
         "documentation": {}
     },
     {
+        "label": "PersonSchemaBase",
+        "kind": 6,
+        "importPath": "api_v1.person.schemas",
+        "description": "api_v1.person.schemas",
+        "peekOfCode": "class PersonSchemaBase(BaseModel):\n    first_name: str = Field(max_length=10)\n    second_name: str = Field(max_length=15)\n    years: int = Field(ge=1)\n    username: str = Field(max_length=10)\n    email: EmailStr = Field(max_length=20)\nclass PersonSchemaCreate(PersonSchemaBase):\n    pass\nclass PersonSchemaUpdate(PersonSchemaCreate):\n    pass",
+        "detail": "api_v1.person.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "PersonSchemaCreate",
+        "kind": 6,
+        "importPath": "api_v1.person.schemas",
+        "description": "api_v1.person.schemas",
+        "peekOfCode": "class PersonSchemaCreate(PersonSchemaBase):\n    pass\nclass PersonSchemaUpdate(PersonSchemaCreate):\n    pass\nclass Person(PersonSchemaBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "detail": "api_v1.person.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "PersonSchemaUpdate",
+        "kind": 6,
+        "importPath": "api_v1.person.schemas",
+        "description": "api_v1.person.schemas",
+        "peekOfCode": "class PersonSchemaUpdate(PersonSchemaCreate):\n    pass\nclass Person(PersonSchemaBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "detail": "api_v1.person.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "kind": 6,
+        "importPath": "api_v1.person.schemas",
+        "description": "api_v1.person.schemas",
+        "peekOfCode": "class Person(PersonSchemaBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "detail": "api_v1.person.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "api_v1.person.views",
+        "description": "api_v1.person.views",
+        "peekOfCode": "router = APIRouter(prefix=\"/person\", tags=[\"Actions with persons\"])\n@router.post(\n    \"/\",\n    response_model=Person,\n    status_code=status.HTTP_201_CREATED,\n)\nasync def create_person(\n    new_person: PersonSchemaCreate,\n    session: AsyncSession = Depends(db_helper.session_dependency),\n):",
+        "detail": "api_v1.person.views",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "kind": 6,
         "importPath": "core.models.base",
@@ -347,7 +544,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City\")",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City\")\napp.include_router(api_v1_router)",
         "detail": "main",
         "documentation": {}
     }

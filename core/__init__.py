@@ -1,5 +1,6 @@
-__all__ = ("Base", "settings")
+__all__ = ("Base", "settings", "db_helper")
 
 from .config import settings
 from .models.base import Base
+from .db_helper import db_helper
 from .models.person import Person

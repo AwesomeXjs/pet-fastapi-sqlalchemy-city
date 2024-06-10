@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
 )
 
-from config import settings
+from .config import settings
 
 
 class DatabaseHelper:
@@ -22,7 +22,7 @@ class DatabaseHelper:
         )
 
     async def session_dependency(self) -> AsyncSession:
-        async with self.section_factory() as sess:
+        async with self.session_factory() as sess:
             yield sess
             await sess.close()
 
