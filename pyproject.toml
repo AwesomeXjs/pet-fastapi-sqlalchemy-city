@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pet-project-fastapi-sqlaclhemy-city"
+version = "0.1.0"
+description = ""
+authors = ["awesomex <bestawes0mex@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.111.0"}
+alembic = "^1.13.1"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.30"}
+asyncpg = "^0.29.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
