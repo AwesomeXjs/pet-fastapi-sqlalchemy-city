@@ -32,6 +32,22 @@
         "documentation": {}
     },
     {
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "op",
         "importPath": "alembic",
         "description": "alembic",
@@ -90,6 +106,30 @@
     },
     {
         "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -361,6 +401,38 @@
         "documentation": {}
     },
     {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "BaseSettings",
         "importPath": "pydantic_settings",
         "description": "pydantic_settings",
@@ -524,8 +596,17 @@
         "kind": 6,
         "importPath": "core.models.person",
         "description": "core.models.person",
-        "peekOfCode": "class Person(Base):\n    first_name: Mapped[str] = mapped_column(String(10))\n    second_name: Mapped[str] = mapped_column(String(15))\n    years: Mapped[int]\n    username: Mapped[str] = mapped_column(String(10), unique=True)\n    email: Mapped[str] = mapped_column(String(20))",
+        "peekOfCode": "class Person(Base):\n    first_name: Mapped[str] = mapped_column(String(10))\n    second_name: Mapped[str] = mapped_column(String(15))\n    years: Mapped[int]\n    username: Mapped[str] = mapped_column(String(10), unique=True)\n    email: Mapped[str] = mapped_column(String(20))\n    work_place_id: Mapped[int] = mapped_column(ForeignKey(\"shops.id\"))\n    work_place: Mapped[\"Shop\"] = relationship(back_populates=\"workers\")",
         "detail": "core.models.person",
+        "documentation": {}
+    },
+    {
+        "label": "Shop",
+        "kind": 6,
+        "importPath": "core.models.shop",
+        "description": "core.models.shop",
+        "peekOfCode": "class Shop(Base):\n    title: Mapped[str] = mapped_column(String(20), unique=True)\n    products: Mapped[list[str]]\n    rating: Mapped[int] = mapped_column(nullable=True)\n    worker_id: Mapped[int] = mapped_column(ForeignKey(\"persons.id\"))\n    workers: Mapped[list[\"Person\"]] = relationship(back_populates=\"work_place\")",
+        "detail": "core.models.shop",
         "documentation": {}
     },
     {
