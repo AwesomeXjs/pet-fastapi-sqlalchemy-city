@@ -48,6 +48,22 @@
         "documentation": {}
     },
     {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "TYPE_CHECKING",
         "importPath": "typing",
         "description": "typing",
@@ -61,6 +77,14 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
         "documentation": {}
     },
     {
@@ -114,6 +138,22 @@
     },
     {
         "label": "engine_from_config",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Result",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "select",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -217,6 +257,38 @@
         "documentation": {}
     },
     {
+        "label": "Shop",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
         "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -270,6 +342,54 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
         "documentation": {}
     },
     {
@@ -369,11 +489,75 @@
         "documentation": {}
     },
     {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
         "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "find_person_by_email",
+        "importPath": "api_v1.person.dependencies",
+        "description": "api_v1.person.dependencies",
+        "isExtraImport": true,
+        "detail": "api_v1.person.dependencies",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "importPath": "api_v1.person.schemas",
+        "description": "api_v1.person.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.person.schemas",
         "documentation": {}
     },
     {
@@ -535,6 +719,24 @@
         "documentation": {}
     },
     {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
+        "description": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"persons\",\n        sa.Column(\"work_place_name\", sa.String(length=20), nullable=True),\n    )\n    op.drop_constraint(\n        \"persons_work_place_id_fkey\", \"persons\", type_=\"foreignkey\"\n    )\n    op.create_foreign_key(",
+        "detail": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
+        "description": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"persons\",\n        sa.Column(\n            \"work_place_id\", sa.INTEGER(), autoincrement=False, nullable=True\n        ),\n    )\n    op.drop_constraint(None, \"persons\", type_=\"foreignkey\")\n    op.create_foreign_key(",
+        "detail": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
+        "documentation": {}
+    },
+    {
         "label": "run_migrations_offline",
         "kind": 2,
         "importPath": "alembic.env",
@@ -625,6 +827,51 @@
         "documentation": {}
     },
     {
+        "label": "ShopBase",
+        "kind": 6,
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "peekOfCode": "class ShopBase(BaseModel):\n    title: str = Field(max_length=20)\n    products: str\n    rating: int | None = None\nclass CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None",
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CreateShop",
+        "kind": 6,
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "peekOfCode": "class CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass Shop(ShopBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateShop",
+        "kind": 6,
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "peekOfCode": "class UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass Shop(ShopBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Shop",
+        "kind": 6,
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "peekOfCode": "class Shop(ShopBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "api_v1.shop.views",
+        "description": "api_v1.shop.views",
+        "peekOfCode": "router = APIRouter(prefix=\"/shop\", tags=[\"Actions with shops\"])\n@router.post(\n    \"/\",\n    response_model=Shop,\n    status_code=status.HTTP_201_CREATED,\n)\nasync def create_shop(\n    new_shop: CreateShop,\n    session: AsyncSession = Depends(db_helper.session_dependency),\n):",
+        "detail": "api_v1.shop.views",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "kind": 6,
         "importPath": "core.models.base",
@@ -638,7 +885,7 @@
         "kind": 6,
         "importPath": "core.models.person",
         "description": "core.models.person",
-        "peekOfCode": "class Person(Base):\n    first_name: Mapped[str] = mapped_column(String(10))\n    second_name: Mapped[str] = mapped_column(String(15))\n    years: Mapped[int]\n    username: Mapped[str] = mapped_column(String(10), unique=True)\n    email: Mapped[str] = mapped_column(String(20))\n    work_place_id: Mapped[int] = mapped_column(ForeignKey(\"shops.id\"), nullable=True)\n    work_place: Mapped[\"Shop\"] = relationship(back_populates=\"workers\")",
+        "peekOfCode": "class Person(Base):\n    first_name: Mapped[str] = mapped_column(String(10))\n    second_name: Mapped[str] = mapped_column(String(15))\n    years: Mapped[int]\n    username: Mapped[str] = mapped_column(String(10), unique=True)\n    email: Mapped[str] = mapped_column(String(20))\n    work_place_name: Mapped[int] = mapped_column(\n        ForeignKey(\"shops.title\"), nullable=True\n    )\n    work_place: Mapped[\"Shop\"] = relationship(back_populates=\"workers\")",
         "detail": "core.models.person",
         "documentation": {}
     },

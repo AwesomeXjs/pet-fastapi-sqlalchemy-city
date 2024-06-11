@@ -1,4 +1,4 @@
-__all__ = ("Base", "settings", "db_helper", "Shop")
+__all__ = ("Base", "settings", "db_helper", "Shop", "Person")
 
 from .config import settings
 from .models.base import Base
