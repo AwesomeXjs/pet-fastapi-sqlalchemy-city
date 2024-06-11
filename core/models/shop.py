@@ -12,8 +12,7 @@ if TYPE_CHECKING:
 
 class Shop(Base):
     title: Mapped[str] = mapped_column(String(20), unique=True)
-    products: Mapped[list[str]]
+    products: Mapped[str]
     rating: Mapped[int] = mapped_column(nullable=True)
 
-    worker_id: Mapped[int] = mapped_column(ForeignKey("persons.id"))
     workers: Mapped[list["Person"]] = relationship(back_populates="work_place")
