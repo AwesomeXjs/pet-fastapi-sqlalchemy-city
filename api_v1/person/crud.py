@@ -1,10 +1,10 @@
 # Create Read Update Delete
 from pydantic import EmailStr
-from sqlalchemy import select
+from sqlalchemy import Result, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core import Person
-from .schemas import PersonSchemaCreate
+from .schemas import PersonSchemaCreate, PersonSchemaUpdate, PersonSchemaUpdatePartial
 
 
 async def create_person(
@@ -34,9 +34,27 @@ async def find_person_by_email(
     return person
 
 
+async def find_all_persons(session: AsyncSession) -> list[Person]:
+    stmt = select(Person).order_by(Person.id)
+    res: Result = await session.execute(stmt)
+    persons = res.scalars().all()
+    return list(persons)
+
+
 async def delete_person_by_id(
     session: AsyncSession,
     person: Person,
 ) -> None:
     await session.delete(person)
     await session.commit()
+
+
+async def update_person(
+    session: AsyncSession,
+    person: Person,
+    person_update: PersonSchemaUpdatePartial,
+) -> Person:
+    for name, value in person_update.model_dump(exclude_unset=True).items():
+        setattr(person, name, value)
+    await session.commit()
+    return person

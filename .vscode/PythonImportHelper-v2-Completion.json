@@ -81,6 +81,14 @@
         "documentation": {}
     },
     {
+        "label": "Result",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "select",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -178,6 +186,14 @@
     },
     {
         "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -454,7 +470,7 @@
         "kind": 6,
         "importPath": "api_v1.person.schemas",
         "description": "api_v1.person.schemas",
-        "peekOfCode": "class PersonSchemaCreate(PersonSchemaBase):\n    pass\nclass PersonSchemaUpdate(PersonSchemaCreate):\n    pass\nclass Person(PersonSchemaBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "peekOfCode": "class PersonSchemaCreate(PersonSchemaBase):\n    pass\nclass PersonSchemaUpdate(PersonSchemaCreate):\n    pass\nclass PersonSchemaUpdatePartial(PersonSchemaCreate):\n    first_name: str | None = None\n    second_name: str | None = None\n    years: int | None = None\n    username: str | None = None\n    email: EmailStr | None = None",
         "detail": "api_v1.person.schemas",
         "documentation": {}
     },
@@ -463,7 +479,16 @@
         "kind": 6,
         "importPath": "api_v1.person.schemas",
         "description": "api_v1.person.schemas",
-        "peekOfCode": "class PersonSchemaUpdate(PersonSchemaCreate):\n    pass\nclass Person(PersonSchemaBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
+        "peekOfCode": "class PersonSchemaUpdate(PersonSchemaCreate):\n    pass\nclass PersonSchemaUpdatePartial(PersonSchemaCreate):\n    first_name: str | None = None\n    second_name: str | None = None\n    years: int | None = None\n    username: str | None = None\n    email: EmailStr | None = None\nclass Person(PersonSchemaBase):\n    model_config = ConfigDict(from_attributes=True)",
+        "detail": "api_v1.person.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "PersonSchemaUpdatePartial",
+        "kind": 6,
+        "importPath": "api_v1.person.schemas",
+        "description": "api_v1.person.schemas",
+        "peekOfCode": "class PersonSchemaUpdatePartial(PersonSchemaCreate):\n    first_name: str | None = None\n    second_name: str | None = None\n    years: int | None = None\n    username: str | None = None\n    email: EmailStr | None = None\nclass Person(PersonSchemaBase):\n    model_config = ConfigDict(from_attributes=True)\n    id: int",
         "detail": "api_v1.person.schemas",
         "documentation": {}
     },
@@ -481,7 +506,7 @@
         "kind": 5,
         "importPath": "api_v1.person.views",
         "description": "api_v1.person.views",
-        "peekOfCode": "router = APIRouter(prefix=\"/person\", tags=[\"Actions with persons\"])\n@router.post(\n    \"/\",\n    response_model=Person,\n    status_code=status.HTTP_201_CREATED,\n)\nasync def create_person(\n    new_person: PersonSchemaCreate,\n    session: AsyncSession = Depends(db_helper.session_dependency),\n):",
+        "peekOfCode": "router = APIRouter(prefix=\"/person\", tags=[\"Actions with persons\"])\n# create\n@router.post(\n    \"/\",\n    response_model=Person,\n    status_code=status.HTTP_201_CREATED,\n)\nasync def create_person(\n    new_person: PersonSchemaCreate,\n    session: AsyncSession = Depends(db_helper.session_dependency),",
         "detail": "api_v1.person.views",
         "documentation": {}
     },

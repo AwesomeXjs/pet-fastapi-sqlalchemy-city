@@ -17,6 +17,14 @@ class PersonSchemaUpdate(PersonSchemaCreate):
     pass
 
 
+class PersonSchemaUpdatePartial(PersonSchemaCreate):
+    first_name: str | None = None
+    second_name: str | None = None
+    years: int | None = None
+    username: str | None = None
+    email: EmailStr | None = None
+
+
 class Person(PersonSchemaBase):
     model_config = ConfigDict(from_attributes=True)
     id: int

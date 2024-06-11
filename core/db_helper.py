@@ -21,7 +21,7 @@ class DatabaseHelper:
             expire_on_commit=False,
         )
 
-    async def session_dependency(self) -> AsyncSession:
+    async def session_dependency(self):
         async with self.session_factory() as sess:
             yield sess
             await sess.close()
