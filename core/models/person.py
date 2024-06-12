@@ -9,6 +9,7 @@ if TYPE_CHECKING:
 
 
 class Person(Base):
+    id: Mapped[int] = mapped_column(primary_key=True)
     first_name: Mapped[str] = mapped_column(String(10))
     second_name: Mapped[str] = mapped_column(String(15))
     years: Mapped[int]

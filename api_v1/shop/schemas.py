@@ -4,7 +4,6 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class ShopBase(BaseModel):
     title: str = Field(max_length=20)
-    products: str
     rating: int | None = None
 
 
@@ -18,7 +17,10 @@ class UpdateShop(CreateShop):
     rating: int | None = None
 
 
-class Shop(ShopBase):
+class ShopWithId(ShopBase):
+    id: int
+
+
+class ShopAll(ShopWithId):
     model_config = ConfigDict(from_attributes=True)
     workers: list[Person]
-    id: int

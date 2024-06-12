@@ -9,7 +9,7 @@ from . import crud
 from core import db_helper
 from api_v1.person.schemas import Person
 from .dependencies import find_shop_depends
-from .schemas import CreateShop, Shop, ShopBase
+from .schemas import CreateShop, ShopAll, ShopBase
 
 
 router = APIRouter(prefix="/shop", tags=["Actions with shops"])
@@ -36,7 +36,7 @@ async def create_shop(
 )
 async def work_registration(
     session: AsyncSession = Depends(db_helper.session_dependency),
-    shop: Shop = Depends(find_shop_depends),
+    shop: ShopAll = Depends(find_shop_depends),
     person: Person = Depends(find_person_by_email),
 ):
     return await crud.work_registration(
@@ -64,11 +64,11 @@ async def get_shop_workers(
 
 @router.get(
     "/{title}",
-    response_model=Shop,
+    response_model=ShopAll,
     status_code=status.HTTP_200_OK,
 )
 async def get_shop_with_all_workers_by_title(
-    shop: Shop = Depends(find_shop_depends),
+    shop: ShopAll = Depends(find_shop_depends),
 ):
     return shop
 
@@ -96,7 +96,7 @@ async def get_work_of_person(
 
 @router.patch("/work_place", response_model=Person)
 async def update_work_place(
-    new_shop: Shop = Depends(find_shop_depends),
+    new_shop: ShopAll = Depends(find_shop_depends),
     session: AsyncSession = Depends(db_helper.session_dependency),
     person: Person = Depends(find_person_by_email),
 ):
@@ -110,7 +110,7 @@ async def update_work_place(
 @router.delete("/")
 async def delete_shop(
     session: AsyncSession = Depends(db_helper.session_dependency),
-    shop: Shop = Depends(find_shop_depends),
+    shop: ShopAll = Depends(find_shop_depends),
 ):
     return await crud.delete_shop(session=session, shop=shop)
 

@@ -19,7 +19,12 @@ async def create_shop(
 
 
 async def find_shop_by_title(session: AsyncSession, title: str) -> Shop:
-    stmt = select(Shop).where(Shop.title == title).options(joinedload(Shop.workers))
+    stmt = (
+        select(Shop)
+        .where(Shop.title == title)
+        .options(joinedload(Shop.workers))
+        .options(joinedload(Shop.products))
+    )
     result: Result = await session.execute(stmt)
     shop = result.unique().scalar()
     return shop
