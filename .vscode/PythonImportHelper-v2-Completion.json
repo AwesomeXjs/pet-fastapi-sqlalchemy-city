@@ -328,6 +328,14 @@
         "documentation": {}
     },
     {
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "op",
         "importPath": "alembic",
         "description": "alembic",
@@ -1281,15 +1289,7 @@
         "documentation": {}
     },
     {
-        "label": "ShopWithId",
-        "importPath": "api_v1.shop.schemas",
-        "description": "api_v1.shop.schemas",
-        "isExtraImport": true,
-        "detail": "api_v1.shop.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ShopAll",
+        "label": "ShopWithoutWorkers",
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
         "isExtraImport": true,
@@ -1342,6 +1342,14 @@
         "description": "api_v1.person.schemas",
         "isExtraImport": true,
         "detail": "api_v1.person.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ProductAll",
+        "importPath": "api_v1.product.schemas",
+        "description": "api_v1.product.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.product.schemas",
         "documentation": {}
     },
     {
@@ -1821,7 +1829,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductBase(BaseModel):\n    title: str = Field(max_length=50)\n    type: ProductTypes\n    price: int = Field(ge=1)\n    # shops: Mapped[list[\"Shop\"]] = relationship(\n    #     back_populates=\"products\",\n    #     secondary=\"shop_assotiation_table\",\n    # )\nclass ProductCreate(ProductBase):\n    pass",
+        "peekOfCode": "class ProductBase(BaseModel):\n    title: str = Field(max_length=50)\n    type: ProductTypes\n    price: int = Field(ge=1)\nclass ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
@@ -1830,7 +1838,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    shops: list[ShopWithId] | None\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
@@ -1839,7 +1847,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    shops: list[ShopWithId] | None\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
@@ -1848,7 +1856,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductAll(ProductBase):\n    id: int\n    shops: list[ShopWithId] | None\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class ProductAll(ProductBase):\n    id: int\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
@@ -1875,7 +1883,7 @@
         "kind": 6,
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
-        "peekOfCode": "class CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopAll(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "api_v1.shop.schemas",
         "documentation": {}
     },
@@ -1884,7 +1892,7 @@
         "kind": 6,
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
-        "peekOfCode": "class UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopAll(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    workers: list[Person]",
+        "peekOfCode": "class UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    products: list[ProductAll]\nclass ShopAll(ShopWithoutWorkers):",
         "detail": "api_v1.shop.schemas",
         "documentation": {}
     },
@@ -1893,7 +1901,16 @@
         "kind": 6,
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
-        "peekOfCode": "class ShopWithId(ShopBase):\n    id: int\nclass ShopAll(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    workers: list[Person]",
+        "peekOfCode": "class ShopWithId(ShopBase):\n    id: int\nclass ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    products: list[ProductAll]\nclass ShopAll(ShopWithoutWorkers):\n    workers: list[Person]",
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ShopWithoutWorkers",
+        "kind": 6,
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "peekOfCode": "class ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    products: list[ProductAll]\nclass ShopAll(ShopWithoutWorkers):\n    workers: list[Person]",
         "detail": "api_v1.shop.schemas",
         "documentation": {}
     },
@@ -1902,7 +1919,7 @@
         "kind": 6,
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
-        "peekOfCode": "class ShopAll(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    workers: list[Person]",
+        "peekOfCode": "class ShopAll(ShopWithoutWorkers):\n    workers: list[Person]",
         "detail": "api_v1.shop.schemas",
         "documentation": {}
     },

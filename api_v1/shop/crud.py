@@ -67,6 +67,17 @@ async def get_workers_of_shop(session: AsyncSession, title: str) -> list[Person]
     return shop.workers
 
 
+async def get_all_persons_with_works(session: AsyncSession) -> list[Person]:
+    query = (
+        select(Person)
+        .options(joinedload(Person.work_place))
+        .where(Person.work_place_name != None)
+    )
+    res = await session.execute(query)
+    persons = res.unique().scalars().all()
+    return persons
+
+
 # UPDATE
 async def update_work_place(session: AsyncSession, person: Person, new_place: Shop):
     setattr(person, "work_place_name", new_place.title)

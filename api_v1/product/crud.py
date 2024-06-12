@@ -38,23 +38,18 @@ async def get_product_by_title(session: AsyncSession, title: str) -> Product:
 
 
 async def get_products_by_shop(session: AsyncSession, title: str) -> list[Product]:
-    query = select(Shop).where(Shop.title == title).options(joinedload(Shop.products))
+    query = select(Shop).where(Shop.title == title).options(selectinload(Shop.products))
     result: Result = await session.execute(query)
     shop = result.scalar()
     return shop.products
 
 
-async def get_shops_by_product(
-    session: AsyncSession, product_title: str
-) -> list[ShopWithId]:
-    query = (
-        select(Product)
-        .where(Product.title == product_title)
-        .options(joinedload(Product.shops))
-    )
-    result: Result = await session.execute(query)
-    product = result.scalar()
-    return product.shops
+async def get_all_shops_with_all_products(session: AsyncSession) -> list[Shop]:
+    query = select(Shop).options(selectinload(Shop.products))
+    res = await session.execute(query)
+    shops = res.scalars().all()
+    print(shops)
+    return shops
 
 
 # UPDATE

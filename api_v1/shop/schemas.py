@@ -1,5 +1,9 @@
+from typing import TYPE_CHECKING
+
 from api_v1.person.schemas import Person
 from pydantic import BaseModel, ConfigDict, Field
+
+from api_v1.product.schemas import ProductAll
 
 
 class ShopBase(BaseModel):
@@ -21,6 +25,11 @@ class ShopWithId(ShopBase):
     id: int
 
 
-class ShopAll(ShopWithId):
+class ShopWithoutWorkers(ShopWithId):
     model_config = ConfigDict(from_attributes=True)
+    products: list[ProductAll]
+
+
+class ShopAll(ShopWithoutWorkers):
+
     workers: list[Person]

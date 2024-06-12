@@ -5,9 +5,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from . import crud
 from core import db_helper
 from core.models.product import Product
-from api_v1.shop.schemas import ShopAll
 from .dependencies import get_product_by_title
 from api_v1.shop.dependencies import find_shop_depends
+from api_v1.shop.schemas import ShopAll, ShopWithoutWorkers
 from .schemas import ProductCreate, ProductAll, ProductUpdate
 
 router = APIRouter(prefix="/product", tags=["Actions with products"])
@@ -57,15 +57,11 @@ async def get_products_by_shop(
     )
 
 
-@router.get("/shops_by_products")
-async def get_shops_by_products(
-    product_title: str,
+@router.get("/all_shops", response_model=list[ShopWithoutWorkers])
+async def get_all_shops_with_products(
     session: AsyncSession = Depends(db_helper.session_dependency),
 ):
-    return await crud.get_shops_by_product(
-        product_title=product_title,
-        session=session,
-    )
+    return await crud.get_all_shops_with_all_products(session=session)
 
 
 # UPDATE

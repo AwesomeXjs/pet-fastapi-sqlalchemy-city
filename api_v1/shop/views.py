@@ -94,6 +94,13 @@ async def get_work_of_person(
     )
 
 
+@router.get("/persons_with_shops")
+async def get_all_persons_with_works(
+    session: AsyncSession = Depends(db_helper.session_dependency),
+):
+    return await crud.get_all_persons_with_works(session=session)
+
+
 @router.patch("/", response_model=Person)
 async def update_shop(
     new_shop: ShopAll = Depends(find_shop_depends),
