@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload, joinedload
 
 from core import Shop, Person
-from .schemas import CreateShop
+from .schemas import CreateShop, ShopAll, ShopWithId, UpdateShop
 
 
 # Create read update delete
@@ -79,6 +79,17 @@ async def get_all_persons_with_works(session: AsyncSession) -> list[Person]:
 
 
 # UPDATE
+async def update_shop(
+    session: AsyncSession,
+    shop: ShopAll,
+    new_shop: UpdateShop,
+) -> Shop:
+    for name, value in new_shop.model_dump(exclude_unset=True).items():
+        setattr(shop, name, value)
+    await session.commit()
+    return shop
+
+
 async def update_work_place(session: AsyncSession, person: Person, new_place: Shop):
     setattr(person, "work_place_name", new_place.title)
     await session.commit()

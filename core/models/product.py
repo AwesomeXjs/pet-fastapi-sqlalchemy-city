@@ -11,16 +11,10 @@ if TYPE_CHECKING:
     from .shop import Shop
 
 
-class ProductTypes(Enum):
-    technical = "technical"
-    food = "food"
-    books = "books"
-
-
 class Product(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column(String(50), unique=True)
-    type: Mapped[ProductTypes]
+    type: Mapped[str]
     price: Mapped[int]
 
     shops: Mapped[list["Shop"]] = relationship(

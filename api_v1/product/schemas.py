@@ -1,7 +1,5 @@
 from pydantic import BaseModel, ConfigDict, Field
 
-from core.models.product import ProductTypes
-
 
 class ProductBase(BaseModel):
     title: str = Field(max_length=50)
@@ -15,7 +13,7 @@ class ProductCreate(ProductBase):
 
 class ProductUpdate(ProductCreate):
     title: str | None = None
-    type: ProductTypes | None = None
+    type: str | None = None
     price: int | None = None
 
 

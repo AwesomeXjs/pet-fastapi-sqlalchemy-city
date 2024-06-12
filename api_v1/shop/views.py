@@ -9,7 +9,14 @@ from . import crud
 from core import db_helper
 from api_v1.person.schemas import Person
 from .dependencies import find_shop_depends
-from .schemas import CreateShop, ShopAll, ShopBase
+from .schemas import (
+    ShopAll,
+    ShopBase,
+    CreateShop,
+    ShopWithId,
+    UpdateShop,
+    ShopWithoutWorkers,
+)
 
 
 router = APIRouter(prefix="/shop", tags=["Actions with shops"])
@@ -101,8 +108,21 @@ async def get_all_persons_with_works(
     return await crud.get_all_persons_with_works(session=session)
 
 
-@router.patch("/", response_model=Person)
+@router.patch("/", response_model=ShopWithId)
 async def update_shop(
+    new_shop: UpdateShop,
+    shop: ShopWithId = Depends(find_shop_depends),
+    session: AsyncSession = Depends(db_helper.session_dependency),
+):
+    return await crud.update_shop(
+        new_shop=new_shop,
+        session=session,
+        shop=shop,
+    )
+
+
+@router.patch("/update_workplace", response_model=Person)
+async def update_workplace_for_person(
     new_shop: ShopAll = Depends(find_shop_depends),
     session: AsyncSession = Depends(db_helper.session_dependency),
     person: Person = Depends(find_person_by_email),

@@ -9,6 +9,7 @@ from api_v1.product.schemas import ProductAll
 class ShopBase(BaseModel):
     title: str = Field(max_length=20)
     rating: int | None = None
+    compensation: int = Field(ge=1)
 
 
 class CreateShop(ShopBase):
@@ -17,8 +18,8 @@ class CreateShop(ShopBase):
 
 class UpdateShop(CreateShop):
     title: str | None = None
-    products: str | None = None
     rating: int | None = None
+    compensation: int | None = None
 
 
 class ShopWithId(ShopBase):
@@ -31,5 +32,4 @@ class ShopWithoutWorkers(ShopWithId):
 
 
 class ShopAll(ShopWithoutWorkers):
-
     workers: list[Person]

@@ -16,294 +16,6 @@
         "documentation": {}
     },
     {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "TYPE_CHECKING",
         "importPath": "typing",
         "description": "typing",
@@ -333,150 +45,6 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
         "documentation": {}
     },
     {
@@ -1297,11 +865,11 @@
         "documentation": {}
     },
     {
-        "label": "ProductTypes",
-        "importPath": "core.models.product",
-        "description": "core.models.product",
+        "label": "prod",
+        "importPath": "math",
+        "description": "math",
         "isExtraImport": true,
-        "detail": "core.models.product",
+        "detail": "math",
         "documentation": {}
     },
     {
@@ -1310,14 +878,6 @@
         "description": "core.models.product",
         "isExtraImport": true,
         "detail": "core.models.product",
-        "documentation": {}
-    },
-    {
-        "label": "prod",
-        "importPath": "math",
-        "description": "math",
-        "isExtraImport": true,
-        "detail": "math",
         "documentation": {}
     },
     {
@@ -1395,343 +955,19 @@
     {
         "label": "upgrade",
         "kind": 2,
-        "importPath": "alembic.versions.2024_06_10_1702-92c78f7d2520_alembic_init",
-        "description": "alembic.versions.2024_06_10_1702-92c78f7d2520_alembic_init",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_10_1702-92c78f7d2520_alembic_init",
+        "importPath": "alembic.versions.2024_06_12_1808-cb5f009ca544_create_tables",
+        "description": "alembic.versions.2024_06_12_1808-cb5f009ca544_create_tables",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"products\",\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.Column(\"title\", sa.String(length=50), nullable=False),\n        sa.Column(\"type\", sa.String(), nullable=False),\n        sa.Column(\"price\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"title\"),",
+        "detail": "alembic.versions.2024_06_12_1808-cb5f009ca544_create_tables",
         "documentation": {}
     },
     {
         "label": "downgrade",
         "kind": 2,
-        "importPath": "alembic.versions.2024_06_10_1702-92c78f7d2520_alembic_init",
-        "description": "alembic.versions.2024_06_10_1702-92c78f7d2520_alembic_init",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_10_1702-92c78f7d2520_alembic_init",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_10_1713-d7def9e6d15a_person_table",
-        "description": "alembic.versions.2024_06_10_1713-d7def9e6d15a_person_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"persons\",\n        sa.Column(\"first_name\", sa.String(length=10), nullable=False),\n        sa.Column(\"second_name\", sa.String(length=15), nullable=False),\n        sa.Column(\"years\", sa.Integer(), nullable=False),\n        sa.Column(\"username\", sa.String(length=10), nullable=False),\n        sa.Column(\"email\", sa.String(length=20), nullable=False),\n        sa.Column(\"id\", sa.Integer(), nullable=False),",
-        "detail": "alembic.versions.2024_06_10_1713-d7def9e6d15a_person_table",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_10_1713-d7def9e6d15a_person_table",
-        "description": "alembic.versions.2024_06_10_1713-d7def9e6d15a_person_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"persons\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_10_1713-d7def9e6d15a_person_table",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_11_1542-81854bd52aeb_shop",
-        "description": "alembic.versions.2024_06_11_1542-81854bd52aeb_shop",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shops\",\n        sa.Column(\"title\", sa.String(length=20), nullable=False),\n        sa.Column(\"products\", sa.String(), nullable=False),\n        sa.Column(\"rating\", sa.Integer(), nullable=True),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"title\"),",
-        "detail": "alembic.versions.2024_06_11_1542-81854bd52aeb_shop",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_11_1542-81854bd52aeb_shop",
-        "description": "alembic.versions.2024_06_11_1542-81854bd52aeb_shop",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, \"persons\", type_=\"foreignkey\")\n    op.drop_column(\"persons\", \"work_place_id\")\n    op.drop_table(\"shops\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_11_1542-81854bd52aeb_shop",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
-        "description": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"persons\",\n        sa.Column(\"work_place_name\", sa.String(length=20), nullable=True),\n    )\n    op.drop_constraint(\n        \"persons_work_place_id_fkey\", \"persons\", type_=\"foreignkey\"\n    )\n    op.create_foreign_key(",
-        "detail": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
-        "description": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"persons\",\n        sa.Column(\n            \"work_place_id\", sa.INTEGER(), autoincrement=False, nullable=True\n        ),\n    )\n    op.drop_constraint(None, \"persons\", type_=\"foreignkey\")\n    op.create_foreign_key(",
-        "detail": "alembic.versions.2024_06_11_1636-70cb330df104_refresh_foreign_key",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0854-628febdeb1f1_shop",
-        "description": "alembic.versions.2024_06_12_0854-628febdeb1f1_shop",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column(\n        \"shops\", \"products\", existing_type=sa.VARCHAR(), nullable=True\n    )\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column(\n        \"shops\", \"products\", existing_type=sa.VARCHAR(), nullable=False",
-        "detail": "alembic.versions.2024_06_12_0854-628febdeb1f1_shop",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0854-628febdeb1f1_shop",
-        "description": "alembic.versions.2024_06_12_0854-628febdeb1f1_shop",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column(\n        \"shops\", \"products\", existing_type=sa.VARCHAR(), nullable=False\n    )\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_0854-628febdeb1f1_shop",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0935-e9dd86f8b2bd_create_tables",
-        "description": "alembic.versions.2024_06_12_0935-e9dd86f8b2bd_create_tables",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shops\",\n        sa.Column(\"title\", sa.String(length=20), nullable=False),\n        sa.Column(\"products\", sa.String(), nullable=True),\n        sa.Column(\"rating\", sa.Integer(), nullable=True),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"title\"),",
-        "detail": "alembic.versions.2024_06_12_0935-e9dd86f8b2bd_create_tables",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0935-e9dd86f8b2bd_create_tables",
-        "description": "alembic.versions.2024_06_12_0935-e9dd86f8b2bd_create_tables",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"persons\")\n    op.drop_table(\"shops\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_0935-e9dd86f8b2bd_create_tables",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0943-ee3e40a12931_create_tables",
-        "description": "alembic.versions.2024_06_12_0943-ee3e40a12931_create_tables",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shops\",\n        sa.Column(\"title\", sa.String(length=20), nullable=False),\n        sa.Column(\"products\", sa.String(), nullable=True),\n        sa.Column(\"rating\", sa.Integer(), nullable=True),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"title\"),",
-        "detail": "alembic.versions.2024_06_12_0943-ee3e40a12931_create_tables",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0943-ee3e40a12931_create_tables",
-        "description": "alembic.versions.2024_06_12_0943-ee3e40a12931_create_tables",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"persons\")\n    op.drop_table(\"shops\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_0943-ee3e40a12931_create_tables",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0945-ef5aff4c49c3_create_tables",
-        "description": "alembic.versions.2024_06_12_0945-ef5aff4c49c3_create_tables",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shops\",\n        sa.Column(\"title\", sa.String(length=20), nullable=False),\n        sa.Column(\"products\", sa.String(), nullable=True),\n        sa.Column(\"rating\", sa.Integer(), nullable=True),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"title\"),",
-        "detail": "alembic.versions.2024_06_12_0945-ef5aff4c49c3_create_tables",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_0945-ef5aff4c49c3_create_tables",
-        "description": "alembic.versions.2024_06_12_0945-ef5aff4c49c3_create_tables",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"persons\")\n    op.drop_table(\"shops\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_0945-ef5aff4c49c3_create_tables",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1133-8414cf9d6cfe_email",
-        "description": "alembic.versions.2024_06_12_1133-8414cf9d6cfe_email",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column(\n        \"persons\",\n        \"email\",\n        existing_type=sa.VARCHAR(length=20),\n        type_=sa.String(length=50),\n        existing_nullable=False,\n    )\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1133-8414cf9d6cfe_email",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1133-8414cf9d6cfe_email",
-        "description": "alembic.versions.2024_06_12_1133-8414cf9d6cfe_email",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.alter_column(\n        \"persons\",\n        \"email\",\n        existing_type=sa.String(length=50),\n        type_=sa.VARCHAR(length=20),\n        existing_nullable=False,\n    )\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1133-8414cf9d6cfe_email",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1157-bbc3381730b4_unique_email",
-        "description": "alembic.versions.2024_06_12_1157-bbc3381730b4_unique_email",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_unique_constraint(None, \"persons\", [\"email\"])\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, \"persons\", type_=\"unique\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1157-bbc3381730b4_unique_email",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1157-bbc3381730b4_unique_email",
-        "description": "alembic.versions.2024_06_12_1157-bbc3381730b4_unique_email",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, \"persons\", type_=\"unique\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1157-bbc3381730b4_unique_email",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1223-072566cf619a_workers_id",
-        "description": "alembic.versions.2024_06_12_1223-072566cf619a_workers_id",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"shops\", sa.Column(\"workers_id\", sa.Integer(), nullable=True)\n    )\n    op.create_foreign_key(None, \"shops\", \"persons\", [\"workers_id\"], [\"id\"])\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, \"shops\", type_=\"foreignkey\")",
-        "detail": "alembic.versions.2024_06_12_1223-072566cf619a_workers_id",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1223-072566cf619a_workers_id",
-        "description": "alembic.versions.2024_06_12_1223-072566cf619a_workers_id",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, \"shops\", type_=\"foreignkey\")\n    op.drop_column(\"shops\", \"workers_id\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1223-072566cf619a_workers_id",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1224-9b7e37c8a47d_drop_id",
-        "description": "alembic.versions.2024_06_12_1224-9b7e37c8a47d_drop_id",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(\"shops_workers_id_fkey\", \"shops\", type_=\"foreignkey\")\n    op.drop_column(\"shops\", \"workers_id\")\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"shops\",\n        sa.Column(",
-        "detail": "alembic.versions.2024_06_12_1224-9b7e37c8a47d_drop_id",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1224-9b7e37c8a47d_drop_id",
-        "description": "alembic.versions.2024_06_12_1224-9b7e37c8a47d_drop_id",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"shops\",\n        sa.Column(\n            \"workers_id\", sa.INTEGER(), autoincrement=False, nullable=True\n        ),\n    )\n    op.create_foreign_key(\n        \"shops_workers_id_fkey\", \"shops\", \"persons\", [\"workers_id\"], [\"id\"]",
-        "detail": "alembic.versions.2024_06_12_1224-9b7e37c8a47d_drop_id",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1348-d65135b83fd4_product_table",
-        "description": "alembic.versions.2024_06_12_1348-d65135b83fd4_product_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"products\",\n        sa.Column(\"title\", sa.String(length=50), nullable=False),\n        sa.Column(\n            \"type\",\n            sa.Enum(\"technical\", \"food\", \"books\", name=\"producttypes\"),\n            nullable=False,\n        ),",
-        "detail": "alembic.versions.2024_06_12_1348-d65135b83fd4_product_table",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1348-d65135b83fd4_product_table",
-        "description": "alembic.versions.2024_06_12_1348-d65135b83fd4_product_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"shops\",\n        sa.Column(\n            \"products\", sa.VARCHAR(), autoincrement=False, nullable=True\n        ),\n    )\n    op.drop_table(\"products\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1348-d65135b83fd4_product_table",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1351-dacba367079b_association_table",
-        "description": "alembic.versions.2024_06_12_1351-dacba367079b_association_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shopsassotiationtables\",\n        sa.Column(\"product_id\", sa.Integer(), nullable=False),\n        sa.Column(\"shop_id\", sa.Integer(), nullable=False),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.ForeignKeyConstraint(\n            [\"product_id\"], [\"products.id\"], ondelete=\"CASCADE\"\n        ),",
-        "detail": "alembic.versions.2024_06_12_1351-dacba367079b_association_table",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1351-dacba367079b_association_table",
-        "description": "alembic.versions.2024_06_12_1351-dacba367079b_association_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"shopsassotiationtables\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1351-dacba367079b_association_table",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1352-6bde8f2cc815_association_table",
-        "description": "alembic.versions.2024_06_12_1352-6bde8f2cc815_association_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shop_assotiation_table\",\n        sa.Column(\"product_id\", sa.Integer(), nullable=False),\n        sa.Column(\"shop_id\", sa.Integer(), nullable=False),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.ForeignKeyConstraint(\n            [\"product_id\"], [\"products.id\"], ondelete=\"CASCADE\"\n        ),",
-        "detail": "alembic.versions.2024_06_12_1352-6bde8f2cc815_association_table",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1352-6bde8f2cc815_association_table",
-        "description": "alembic.versions.2024_06_12_1352-6bde8f2cc815_association_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shopsassotiationtables\",\n        sa.Column(\n            \"product_id\", sa.INTEGER(), autoincrement=False, nullable=False\n        ),\n        sa.Column(\n            \"shop_id\", sa.INTEGER(), autoincrement=False, nullable=False\n        ),",
-        "detail": "alembic.versions.2024_06_12_1352-6bde8f2cc815_association_table",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1407-703c5d57f4f3_unique_products_titles",
-        "description": "alembic.versions.2024_06_12_1407-703c5d57f4f3_unique_products_titles",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_unique_constraint(None, \"products\", [\"title\"])\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, \"products\", type_=\"unique\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1407-703c5d57f4f3_unique_products_titles",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1407-703c5d57f4f3_unique_products_titles",
-        "description": "alembic.versions.2024_06_12_1407-703c5d57f4f3_unique_products_titles",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, \"products\", type_=\"unique\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_06_12_1407-703c5d57f4f3_unique_products_titles",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1457-f98c88a9aaa3_fix_id_assotiation_table",
-        "description": "alembic.versions.2024_06_12_1457-f98c88a9aaa3_fix_id_assotiation_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shopsassotiationtables\",\n        sa.Column(\"product_id\", sa.Integer(), nullable=False),\n        sa.Column(\"shop_id\", sa.Integer(), nullable=False),\n        sa.ForeignKeyConstraint(\n            [\"product_id\"], [\"products.id\"], ondelete=\"CASCADE\"\n        ),\n        sa.ForeignKeyConstraint([\"shop_id\"], [\"shops.id\"], ondelete=\"CASCADE\"),",
-        "detail": "alembic.versions.2024_06_12_1457-f98c88a9aaa3_fix_id_assotiation_table",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1457-f98c88a9aaa3_fix_id_assotiation_table",
-        "description": "alembic.versions.2024_06_12_1457-f98c88a9aaa3_fix_id_assotiation_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shop_assotiation_table\",\n        sa.Column(\n            \"product_id\", sa.INTEGER(), autoincrement=False, nullable=False\n        ),\n        sa.Column(\n            \"shop_id\", sa.INTEGER(), autoincrement=False, nullable=False\n        ),",
-        "detail": "alembic.versions.2024_06_12_1457-f98c88a9aaa3_fix_id_assotiation_table",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1458-d2a3b05c28cc_fix_id_assotiation_table",
-        "description": "alembic.versions.2024_06_12_1458-d2a3b05c28cc_fix_id_assotiation_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shop_assotiation_table\",\n        sa.Column(\"product_id\", sa.Integer(), nullable=False),\n        sa.Column(\"shop_id\", sa.Integer(), nullable=False),\n        sa.ForeignKeyConstraint(\n            [\"product_id\"], [\"products.id\"], ondelete=\"CASCADE\"\n        ),\n        sa.ForeignKeyConstraint([\"shop_id\"], [\"shops.id\"], ondelete=\"CASCADE\"),",
-        "detail": "alembic.versions.2024_06_12_1458-d2a3b05c28cc_fix_id_assotiation_table",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1458-d2a3b05c28cc_fix_id_assotiation_table",
-        "description": "alembic.versions.2024_06_12_1458-d2a3b05c28cc_fix_id_assotiation_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"shopsassotiationtables\",\n        sa.Column(\n            \"product_id\", sa.INTEGER(), autoincrement=False, nullable=False\n        ),\n        sa.Column(\n            \"shop_id\", sa.INTEGER(), autoincrement=False, nullable=False\n        ),",
-        "detail": "alembic.versions.2024_06_12_1458-d2a3b05c28cc_fix_id_assotiation_table",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1500-247205031c04_fix_name_of_collumns_assotiation_table",
-        "description": "alembic.versions.2024_06_12_1500-247205031c04_fix_name_of_collumns_assotiation_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"shop_assotiation_table\",\n        sa.Column(\"product_title\", sa.String(length=50), nullable=False),\n    )\n    op.add_column(\n        \"shop_assotiation_table\",\n        sa.Column(\"shop_title\", sa.String(length=20), nullable=False),\n    )",
-        "detail": "alembic.versions.2024_06_12_1500-247205031c04_fix_name_of_collumns_assotiation_table",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_06_12_1500-247205031c04_fix_name_of_collumns_assotiation_table",
-        "description": "alembic.versions.2024_06_12_1500-247205031c04_fix_name_of_collumns_assotiation_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"shop_assotiation_table\",\n        sa.Column(\n            \"shop_id\", sa.INTEGER(), autoincrement=False, nullable=False\n        ),\n    )\n    op.add_column(\n        \"shop_assotiation_table\",",
-        "detail": "alembic.versions.2024_06_12_1500-247205031c04_fix_name_of_collumns_assotiation_table",
+        "importPath": "alembic.versions.2024_06_12_1808-cb5f009ca544_create_tables",
+        "description": "alembic.versions.2024_06_12_1808-cb5f009ca544_create_tables",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"shop_assotiation_table\")\n    op.drop_table(\"persons\")\n    op.drop_table(\"shops\")\n    op.drop_table(\"products\")\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.2024_06_12_1808-cb5f009ca544_create_tables",
         "documentation": {}
     },
     {
@@ -1829,7 +1065,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductBase(BaseModel):\n    title: str = Field(max_length=50)\n    type: ProductTypes\n    price: int = Field(ge=1)\nclass ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None",
+        "peekOfCode": "class ProductBase(BaseModel):\n    title: str = Field(max_length=50)\n    type: ProductTypes\n    price: int = Field(ge=1)\nclass ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: str | None = None\n    price: int | None = None",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
@@ -1838,7 +1074,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: str | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
@@ -1847,7 +1083,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: ProductTypes | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: str | None = None\n    price: int | None = None\nclass ProductAll(ProductBase):\n    id: int\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
@@ -1874,7 +1110,7 @@
         "kind": 6,
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
-        "peekOfCode": "class ShopBase(BaseModel):\n    title: str = Field(max_length=20)\n    rating: int | None = None\nclass CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass ShopWithId(ShopBase):",
+        "peekOfCode": "class ShopBase(BaseModel):\n    title: str = Field(max_length=20)\n    rating: int | None = None\n    compensation: int = Field(ge=1)\nclass CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    rating: int | None = None\n    compensation: int | None = None",
         "detail": "api_v1.shop.schemas",
         "documentation": {}
     },
@@ -1883,7 +1119,7 @@
         "kind": 6,
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
-        "peekOfCode": "class CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)",
+        "peekOfCode": "class CreateShop(ShopBase):\n    pass\nclass UpdateShop(CreateShop):\n    title: str | None = None\n    rating: int | None = None\n    compensation: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)",
         "detail": "api_v1.shop.schemas",
         "documentation": {}
     },
@@ -1892,7 +1128,7 @@
         "kind": 6,
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
-        "peekOfCode": "class UpdateShop(CreateShop):\n    title: str | None = None\n    products: str | None = None\n    rating: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    products: list[ProductAll]\nclass ShopAll(ShopWithoutWorkers):",
+        "peekOfCode": "class UpdateShop(CreateShop):\n    title: str | None = None\n    rating: int | None = None\n    compensation: int | None = None\nclass ShopWithId(ShopBase):\n    id: int\nclass ShopWithoutWorkers(ShopWithId):\n    model_config = ConfigDict(from_attributes=True)\n    products: list[ProductAll]\nclass ShopAll(ShopWithoutWorkers):",
         "detail": "api_v1.shop.schemas",
         "documentation": {}
     },
@@ -1951,20 +1187,11 @@
         "documentation": {}
     },
     {
-        "label": "ProductTypes",
-        "kind": 6,
-        "importPath": "core.models.product",
-        "description": "core.models.product",
-        "peekOfCode": "class ProductTypes(Enum):\n    technical = \"technical\"\n    food = \"food\"\n    books = \"books\"\nclass Product(Base):\n    id: Mapped[int] = mapped_column(primary_key=True)\n    title: Mapped[str] = mapped_column(String(50), unique=True)\n    type: Mapped[ProductTypes]\n    price: Mapped[int]\n    shops: Mapped[list[\"Shop\"]] = relationship(",
-        "detail": "core.models.product",
-        "documentation": {}
-    },
-    {
         "label": "Product",
         "kind": 6,
         "importPath": "core.models.product",
         "description": "core.models.product",
-        "peekOfCode": "class Product(Base):\n    id: Mapped[int] = mapped_column(primary_key=True)\n    title: Mapped[str] = mapped_column(String(50), unique=True)\n    type: Mapped[ProductTypes]\n    price: Mapped[int]\n    shops: Mapped[list[\"Shop\"]] = relationship(\n        back_populates=\"products\",\n        secondary=\"shop_assotiation_table\",\n    )",
+        "peekOfCode": "class Product(Base):\n    id: Mapped[int] = mapped_column(primary_key=True)\n    title: Mapped[str] = mapped_column(String(50), unique=True)\n    type: Mapped[str]\n    price: Mapped[int]\n    shops: Mapped[list[\"Shop\"]] = relationship(\n        back_populates=\"products\",\n        secondary=\"shop_assotiation_table\",\n    )",
         "detail": "core.models.product",
         "documentation": {}
     },
@@ -1973,7 +1200,7 @@
         "kind": 6,
         "importPath": "core.models.shop",
         "description": "core.models.shop",
-        "peekOfCode": "class Shop(Base):\n    id: Mapped[int] = mapped_column(primary_key=True)\n    title: Mapped[str] = mapped_column(String(20), unique=True)\n    rating: Mapped[int] = mapped_column(nullable=True)\n    products: Mapped[list[\"Product\"]] = relationship(\n        back_populates=\"shops\", secondary=\"shop_assotiation_table\"\n    )\n    workers: Mapped[list[\"Person\"]] = relationship(back_populates=\"work_place\")",
+        "peekOfCode": "class Shop(Base):\n    id: Mapped[int] = mapped_column(primary_key=True)\n    title: Mapped[str] = mapped_column(String(20), unique=True)\n    rating: Mapped[int] = mapped_column(nullable=True)\n    compensation: Mapped[int]\n    products: Mapped[list[\"Product\"]] = relationship(\n        back_populates=\"shops\", secondary=\"shop_assotiation_table\"\n    )\n    workers: Mapped[list[\"Person\"]] = relationship(back_populates=\"work_place\")",
         "detail": "core.models.shop",
         "documentation": {}
     },

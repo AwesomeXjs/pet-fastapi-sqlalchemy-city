@@ -15,6 +15,7 @@ class Shop(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column(String(20), unique=True)
     rating: Mapped[int] = mapped_column(nullable=True)
+    compensation: Mapped[int]
 
     products: Mapped[list["Product"]] = relationship(
         back_populates="shops", secondary="shop_assotiation_table"
