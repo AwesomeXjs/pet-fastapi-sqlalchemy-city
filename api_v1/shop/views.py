@@ -1,14 +1,15 @@
-from fastapi import status, Depends, APIRouter
+from pydantic import EmailStr
 from sqlalchemy.ext.asyncio import AsyncSession
+from fastapi import HTTPException, status, Depends, APIRouter
 
 from api_v1.person.dependencies import find_person_by_email
 
 
 from . import crud
 from core import db_helper
-from .schemas import CreateShop, Shop
 from api_v1.person.schemas import Person
 from .dependencies import find_shop_depends
+from .schemas import CreateShop, Shop, ShopBase
 
 
 router = APIRouter(prefix="/shop", tags=["Actions with shops"])
@@ -29,17 +30,6 @@ async def create_shop(
     )
 
 
-@router.get(
-    "/{title}",
-    response_model=Shop,
-    status_code=status.HTTP_200_OK,
-)
-async def get_shop_by_title(
-    shop: Shop = Depends(find_shop_depends),
-):
-    return shop
-
-
 @router.post("/work")
 async def work_registration(
     session: AsyncSession = Depends(db_helper.session_dependency),
@@ -51,3 +41,80 @@ async def work_registration(
         shop=shop,
         person=person,
     )
+
+
+@router.get("/shop_workers", response_model=list[Person])
+async def get_shop_workers(
+    title: str, session: AsyncSession = Depends(db_helper.session_dependency)
+):
+    result = await crud.get_workers_of_shop(
+        session=session,
+        title=title,
+    )
+    if result:
+        return result
+    raise HTTPException(
+        status_code=status.HTTP_404_NOT_FOUND,
+        detail=f"Workers not found",
+    )
+
+
+@router.get(
+    "/{title}",
+    response_model=Shop,
+    status_code=status.HTTP_200_OK,
+)
+async def get_shop_with_all_workers_by_title(
+    shop: Shop = Depends(find_shop_depends),
+):
+    return shop
+
+
+@router.get(
+    "/work_of_person/{email}",
+    response_model=ShopBase | None,
+    status_code=status.HTTP_202_ACCEPTED,
+)
+async def get_work_of_person(
+    email: EmailStr,
+    session: AsyncSession = Depends(db_helper.session_dependency),
+):
+    result = await crud.get_work_by_person(
+        session=session,
+        email=email,
+    )
+    if result:
+        return result
+    raise HTTPException(
+        status_code=status.HTTP_404_NOT_FOUND,
+        detail=f"This person without work",
+    )
+
+
+@router.patch("/work_place", response_model=Person)
+async def update_work_place(
+    new_shop: Shop = Depends(find_shop_depends),
+    session: AsyncSession = Depends(db_helper.session_dependency),
+    person: Person = Depends(find_person_by_email),
+):
+    return await crud.update_work_place(
+        session=session,
+        person=person,
+        new_place=new_shop,
+    )
+
+
+@router.delete("/")
+async def delete_shop(
+    session: AsyncSession = Depends(db_helper.session_dependency),
+    shop: Shop = Depends(find_shop_depends),
+):
+    return await crud.delete_shop(session=session, shop=shop)
+
+
+@router.delete("/work_place")
+async def delete_work_place_of_person(
+    session: AsyncSession = Depends(db_helper.session_dependency),
+    person: Person = Depends(find_person_by_email),
+):
+    return await crud.delete_work_place(session=session, person=person)

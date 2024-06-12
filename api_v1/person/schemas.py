@@ -7,6 +7,7 @@ class PersonSchemaBase(BaseModel):
     years: int = Field(ge=1)
     username: str = Field(max_length=10)
     email: EmailStr = Field(max_length=20)
+    work_place_name: str
 
 
 class PersonSchemaCreate(PersonSchemaBase):

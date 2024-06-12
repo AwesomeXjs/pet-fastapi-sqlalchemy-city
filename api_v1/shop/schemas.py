@@ -1,3 +1,4 @@
+from api_v1.person.schemas import Person
 from pydantic import BaseModel, ConfigDict, Field
 
 
@@ -19,4 +20,5 @@ class UpdateShop(CreateShop):
 
 class Shop(ShopBase):
     model_config = ConfigDict(from_attributes=True)
+    workers: list[Person]
     id: int

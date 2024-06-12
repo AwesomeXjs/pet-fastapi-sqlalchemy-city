@@ -66,7 +66,7 @@ async def get_person_by_email(
 
 
 # update
-@router.post("/update", response_model=Person)
+@router.patch("/update", response_model=Person)
 async def update_person(
     person_update: PersonSchemaUpdatePartial,
     person: Person = Depends(find_person_by_email),
