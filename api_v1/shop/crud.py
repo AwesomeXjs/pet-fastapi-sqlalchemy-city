@@ -1,4 +1,5 @@
 from sqlalchemy import Result, select
+from fastapi import status, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload, joinedload
 
@@ -27,8 +28,16 @@ async def find_shop_by_title(session: AsyncSession, title: str) -> Shop:
 # добавить айди магазина в таблицу к воркеру
 # зайти на сайт ввести емаил и название магазина и чтобы он добавился в список work_place
 async def work_registration(session: AsyncSession, person: Person, shop: Shop):
-    setattr(person, "work_place_name", shop.title)
-    await session.commit()
+    if person.work_place_name is None:
+        setattr(person, "work_place_name", shop.title)
+        await session.commit()
+        return {
+            "status": "accept",
+            "details": f"Пользователь {person.username} устроился на работу в магазин {shop.title}",
+        }
+    raise HTTPException(
+        status_code=status.HTTP_303_SEE_OTHER, detail=f"У пользователя уже есть работа"
+    )
 
 
 # Read

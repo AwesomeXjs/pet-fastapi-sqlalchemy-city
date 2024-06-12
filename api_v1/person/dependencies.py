@@ -15,7 +15,7 @@ async def find_person_by_id(
         return person
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
-        detail=f"person with id {id} not found",
+        detail=f"person with id {person_id} not found",
     )
 
 

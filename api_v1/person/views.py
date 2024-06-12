@@ -18,7 +18,7 @@ router = APIRouter(prefix="/person", tags=["Actions with persons"])
 # create
 @router.post(
     "/",
-    response_model=Person,
+    response_model=PersonSchemaCreate,
     status_code=status.HTTP_201_CREATED,
 )
 async def create_person(
@@ -46,23 +46,21 @@ async def get_all_persons(
     status_code=status.HTTP_200_OK,
 )
 async def get_person_by_id(
-    id: int,
-    session: AsyncSession = Depends(db_helper.session_dependency),
+    person: Person = Depends(find_person_by_id),
 ):
-    return await crud.find_person_by_id(id=id, session=session)
+    return person
 
 
 # read by email
 @router.get(
-    "/{email}",
+    "/",
     response_model=Person,
     status_code=status.HTTP_200_OK,
 )
 async def get_person_by_email(
-    email: EmailStr,
-    session: AsyncSession = Depends(db_helper.session_dependency),
+    person: Person = Depends(find_person_by_email),
 ):
-    return await crud.find_person_by_email(email=email, session=session)
+    return person
 
 
 # update

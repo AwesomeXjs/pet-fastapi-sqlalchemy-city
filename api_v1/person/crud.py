@@ -1,6 +1,7 @@
 # Create Read Update Delete
 from pydantic import EmailStr
 from sqlalchemy import Result, select
+from sqlalchemy.orm import selectinload
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core import Person
@@ -35,7 +36,7 @@ async def find_person_by_email(
 
 
 async def find_all_persons(session: AsyncSession) -> list[Person]:
-    stmt = select(Person).order_by(Person.id)
+    stmt = select(Person).options(selectinload(Person.work_place)).order_by(Person.id)
     res: Result = await session.execute(stmt)
     persons = res.scalars().all()
     return list(persons)

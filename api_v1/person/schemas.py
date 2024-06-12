@@ -6,8 +6,7 @@ class PersonSchemaBase(BaseModel):
     second_name: str = Field(max_length=15)
     years: int = Field(ge=1)
     username: str = Field(max_length=10)
-    email: EmailStr = Field(max_length=20)
-    work_place_name: str
+    email: EmailStr = Field(max_length=50)
 
 
 class PersonSchemaCreate(PersonSchemaBase):
@@ -28,4 +27,5 @@ class PersonSchemaUpdatePartial(PersonSchemaCreate):
 
 class Person(PersonSchemaBase):
     model_config = ConfigDict(from_attributes=True)
+    work_place_name: str | None
     id: int

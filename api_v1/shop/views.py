@@ -17,7 +17,7 @@ router = APIRouter(prefix="/shop", tags=["Actions with shops"])
 
 @router.post(
     "/",
-    response_model=Shop,
+    response_model=CreateShop,
     status_code=status.HTTP_201_CREATED,
 )
 async def create_shop(
@@ -30,7 +30,10 @@ async def create_shop(
     )
 
 
-@router.post("/work")
+@router.post(
+    "/work",
+    status_code=status.HTTP_202_ACCEPTED,
+)
 async def work_registration(
     session: AsyncSession = Depends(db_helper.session_dependency),
     shop: Shop = Depends(find_shop_depends),

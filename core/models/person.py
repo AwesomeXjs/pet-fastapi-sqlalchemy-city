@@ -13,9 +13,9 @@ class Person(Base):
     second_name: Mapped[str] = mapped_column(String(15))
     years: Mapped[int]
     username: Mapped[str] = mapped_column(String(10), unique=True)
-    email: Mapped[str] = mapped_column(String(20))
+    email: Mapped[str] = mapped_column(String(50), unique=True)
 
-    work_place_name: Mapped[int] = mapped_column(
+    work_place_name: Mapped[str | None] = mapped_column(
         ForeignKey("shops.title"), nullable=True
     )
     work_place: Mapped["Shop"] = relationship(back_populates="workers")
