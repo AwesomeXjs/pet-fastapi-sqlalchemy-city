@@ -3,6 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import joinedload, selectinload
 
 from core import Product, Shop
+from api_v1.shop.schemas import ShopWithId
 from .schemas import ProductCreate, ProductUpdate
 
 
@@ -20,6 +21,10 @@ async def create_product(
 async def add_product_to_shop(session: AsyncSession, product: Product, shop: Shop):
     shop.products.append(product)
     await session.commit()
+    return {
+        "status": "access",
+        "detail": f"Продукт {product.title} успешно добавлен в магазин {shop.title}",
+    }
 
 
 # READ
@@ -30,6 +35,26 @@ async def get_product_by_title(session: AsyncSession, title: str) -> Product:
     result: Result = await session.execute(query)
     product = result.scalar()
     return product
+
+
+async def get_products_by_shop(session: AsyncSession, title: str) -> list[Product]:
+    query = select(Shop).where(Shop.title == title).options(joinedload(Shop.products))
+    result: Result = await session.execute(query)
+    shop = result.scalar()
+    return shop.products
+
+
+async def get_shops_by_product(
+    session: AsyncSession, product_title: str
+) -> list[ShopWithId]:
+    query = (
+        select(Product)
+        .where(Product.title == product_title)
+        .options(joinedload(Product.shops))
+    )
+    result: Result = await session.execute(query)
+    product = result.scalar()
+    return product.shops
 
 
 # UPDATE

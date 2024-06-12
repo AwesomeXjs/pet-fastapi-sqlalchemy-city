@@ -1265,6 +1265,38 @@
         "documentation": {}
     },
     {
+        "label": "ShopWithId",
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ShopAll",
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ShopWithId",
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ShopAll",
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
         "label": "ProductTypes",
         "importPath": "core.models.product",
         "description": "core.models.product",
@@ -1278,38 +1310,6 @@
         "description": "core.models.product",
         "isExtraImport": true,
         "detail": "core.models.product",
-        "documentation": {}
-    },
-    {
-        "label": "ShopAll",
-        "importPath": "api_v1.shop.schemas",
-        "description": "api_v1.shop.schemas",
-        "isExtraImport": true,
-        "detail": "api_v1.shop.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ShopWithId",
-        "importPath": "api_v1.shop.schemas",
-        "description": "api_v1.shop.schemas",
-        "isExtraImport": true,
-        "detail": "api_v1.shop.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ShopAll",
-        "importPath": "api_v1.shop.schemas",
-        "description": "api_v1.shop.schemas",
-        "isExtraImport": true,
-        "detail": "api_v1.shop.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "ShopWithId",
-        "importPath": "api_v1.shop.schemas",
-        "description": "api_v1.shop.schemas",
-        "isExtraImport": true,
-        "detail": "api_v1.shop.schemas",
         "documentation": {}
     },
     {

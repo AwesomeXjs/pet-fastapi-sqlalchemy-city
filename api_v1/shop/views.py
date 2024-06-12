@@ -63,11 +63,11 @@ async def get_shop_workers(
 
 
 @router.get(
-    "/{title}",
+    "/",
     response_model=ShopAll,
     status_code=status.HTTP_200_OK,
 )
-async def get_shop_with_all_workers_by_title(
+async def get_shop(
     shop: ShopAll = Depends(find_shop_depends),
 ):
     return shop
@@ -94,8 +94,8 @@ async def get_work_of_person(
     )
 
 
-@router.patch("/work_place", response_model=Person)
-async def update_work_place(
+@router.patch("/", response_model=Person)
+async def update_shop(
     new_shop: ShopAll = Depends(find_shop_depends),
     session: AsyncSession = Depends(db_helper.session_dependency),
     person: Person = Depends(find_person_by_email),

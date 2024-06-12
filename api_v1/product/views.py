@@ -5,8 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from . import crud
 from core import db_helper
 from core.models.product import Product
+from api_v1.shop.schemas import ShopAll
 from .dependencies import get_product_by_title
-from api_v1.shop.schemas import ShopAll, ShopWithId
 from api_v1.shop.dependencies import find_shop_depends
 from .schemas import ProductCreate, ProductAll, ProductUpdate
 
@@ -44,6 +44,28 @@ async def get_product(
     product: ProductAll = Depends(get_product_by_title),
 ):
     return product
+
+
+@router.get("/by_shop")
+async def get_products_by_shop(
+    title: str,
+    session: AsyncSession = Depends(db_helper.session_dependency),
+):
+    return await crud.get_products_by_shop(
+        title=title,
+        session=session,
+    )
+
+
+@router.get("/shops_by_products")
+async def get_shops_by_products(
+    product_title: str,
+    session: AsyncSession = Depends(db_helper.session_dependency),
+):
+    return await crud.get_shops_by_product(
+        product_title=product_title,
+        session=session,
+    )
 
 
 # UPDATE
