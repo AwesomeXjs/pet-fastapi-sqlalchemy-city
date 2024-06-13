@@ -1,5 +1,6 @@
 from math import prod
 from fastapi import APIRouter, Depends
+from fastapi_cache.decorator import cache
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from . import crud
@@ -40,6 +41,7 @@ async def add_product_to_shop(
 
 # READ
 @router.get("/", response_model=ProductAll)
+@cache(expire=60)
 async def get_product(
     product: ProductAll = Depends(get_product_by_title),
 ):
@@ -47,6 +49,7 @@ async def get_product(
 
 
 @router.get("/by_shop")
+@cache(expire=60)
 async def get_products_by_shop(
     title: str,
     session: AsyncSession = Depends(db_helper.session_dependency),

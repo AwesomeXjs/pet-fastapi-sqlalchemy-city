@@ -337,6 +337,22 @@
         "documentation": {}
     },
     {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -873,6 +889,30 @@
         "documentation": {}
     },
     {
+        "label": "cache",
+        "importPath": "fastapi_cache.decorator",
+        "description": "fastapi_cache.decorator",
+        "isExtraImport": true,
+        "detail": "fastapi_cache.decorator",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "fastapi_cache.decorator",
+        "description": "fastapi_cache.decorator",
+        "isExtraImport": true,
+        "detail": "fastapi_cache.decorator",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "fastapi_cache.decorator",
+        "description": "fastapi_cache.decorator",
+        "isExtraImport": true,
+        "detail": "fastapi_cache.decorator",
+        "documentation": {}
+    },
+    {
         "label": "ShopWithId",
         "importPath": "api_v1.shop.schemas",
         "description": "api_v1.shop.schemas",
@@ -974,6 +1014,46 @@
         "description": "pydantic_settings",
         "isExtraImport": true,
         "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncIterator",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "importPath": "redis",
+        "description": "redis",
+        "isExtraImport": true,
+        "detail": "redis",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPICache",
+        "importPath": "fastapi_cache",
+        "description": "fastapi_cache",
+        "isExtraImport": true,
+        "detail": "fastapi_cache",
+        "documentation": {}
+    },
+    {
+        "label": "RedisBackend",
+        "importPath": "fastapi_cache.backends.redis",
+        "description": "fastapi_cache.backends.redis",
+        "isExtraImport": true,
+        "detail": "fastapi_cache.backends.redis",
         "documentation": {}
     },
     {
@@ -1286,7 +1366,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City\")\napp.include_router(api_v1_router)",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.include_router(api_v1_router)",
         "detail": "main",
         "documentation": {}
     }

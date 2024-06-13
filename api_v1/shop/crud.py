@@ -1,3 +1,4 @@
+from time import sleep
 from sqlalchemy import Result, select
 from fastapi import status, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -48,15 +49,9 @@ async def work_registration(session: AsyncSession, person: Person, shop: Shop):
 # Read
 
 
-async def get_work_by_person(session: AsyncSession, email: str):
-    query = (
-        select(Person)
-        .where(Person.email == email)
-        .options(selectinload(Person.work_place))
-    )
-    result: Result = await session.execute(query)
-    person = result.scalar()
-    return person.work_place
+async def get_work_by_person(person: Person):
+    sleep(2)
+    return person.work_place_name
 
 
 async def get_workers_of_shop(session: AsyncSession, title: str) -> list[Person] | str:

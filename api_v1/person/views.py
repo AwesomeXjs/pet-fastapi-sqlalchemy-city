@@ -1,6 +1,7 @@
 from typing import List
 
 from pydantic import EmailStr
+from fastapi_cache.decorator import cache
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -46,6 +47,7 @@ async def create_all_persons(
 
 # read all
 @router.get("/all", response_model=list[Person])
+@cache(expire=60)
 async def get_all_persons(
     session: AsyncSession = Depends(db_helper.session_dependency),
 ):
@@ -58,6 +60,7 @@ async def get_all_persons(
     response_model=Person,
     status_code=status.HTTP_200_OK,
 )
+@cache(expire=60)
 async def get_person_by_id(
     person: Person = Depends(find_person_by_id),
 ):

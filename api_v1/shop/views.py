@@ -1,9 +1,7 @@
 from pydantic import EmailStr
+from fastapi_cache.decorator import cache
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import HTTPException, status, Depends, APIRouter
-
-from api_v1.person.dependencies import find_person_by_email
-
 
 from . import crud
 from core import db_helper
@@ -17,6 +15,7 @@ from .schemas import (
     UpdateShop,
     ShopWithoutWorkers,
 )
+from api_v1.person.dependencies import find_person_by_email
 
 
 router = APIRouter(prefix="/shop", tags=["Actions with shops"])
@@ -54,6 +53,7 @@ async def work_registration(
 
 
 @router.get("/shop_workers", response_model=list[Person])
+@cache(expire=60)
 async def get_shop_workers(
     title: str, session: AsyncSession = Depends(db_helper.session_dependency)
 ):
@@ -74,6 +74,7 @@ async def get_shop_workers(
     response_model=ShopAll,
     status_code=status.HTTP_200_OK,
 )
+@cache(expire=60)
 async def get_shop(
     shop: ShopAll = Depends(find_shop_depends),
 ):
@@ -82,16 +83,13 @@ async def get_shop(
 
 @router.get(
     "/work_of_person/{email}",
-    response_model=ShopBase | None,
+    response_model=str,
     status_code=status.HTTP_202_ACCEPTED,
 )
-async def get_work_of_person(
-    email: EmailStr,
-    session: AsyncSession = Depends(db_helper.session_dependency),
-):
+@cache(expire=60)
+async def get_work_of_person(person: Person = Depends(find_person_by_email)):
     result = await crud.get_work_by_person(
-        session=session,
-        email=email,
+        person=person,
     )
     if result:
         return result
