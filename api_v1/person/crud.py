@@ -1,7 +1,10 @@
 # Create Read Update Delete
+from typing import List
+
+
 from pydantic import EmailStr
-from sqlalchemy import Result, select
 from sqlalchemy.orm import selectinload
+from sqlalchemy import Result, insert, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core import Person
@@ -16,6 +19,15 @@ async def create_person(
     session.add(person)
     await session.commit()
     return person
+
+
+async def create_all_persons(
+    session: AsyncSession,
+    new_persons: List[PersonSchemaCreate],
+) -> list[Person]:
+    persons_list = [Person(**el.model_dump()) for el in new_persons]
+    session.add_all(persons_list)
+    await session.commit()
 
 
 async def find_person_by_id(

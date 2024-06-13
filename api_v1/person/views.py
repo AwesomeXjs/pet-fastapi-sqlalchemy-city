@@ -1,3 +1,5 @@
+from typing import List
+
 from pydantic import EmailStr
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -28,6 +30,17 @@ async def create_person(
     return await crud.create_person(
         session=session,
         new_person=new_person,
+    )
+
+
+@router.post("/all_persons")
+async def create_all_persons(
+    new_persons: List[PersonSchemaCreate],
+    session: AsyncSession = Depends(db_helper.session_dependency),
+):
+    return await crud.create_all_persons(
+        session=session,
+        new_persons=new_persons,
     )
 
 

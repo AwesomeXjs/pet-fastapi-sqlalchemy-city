@@ -16,6 +16,22 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "TYPE_CHECKING",
         "importPath": "typing",
         "description": "typing",
@@ -90,6 +106,14 @@
     },
     {
         "label": "Result",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "insert",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -1065,7 +1089,7 @@
         "kind": 6,
         "importPath": "api_v1.product.schemas",
         "description": "api_v1.product.schemas",
-        "peekOfCode": "class ProductBase(BaseModel):\n    title: str = Field(max_length=50)\n    type: ProductTypes\n    price: int = Field(ge=1)\nclass ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: str | None = None\n    price: int | None = None",
+        "peekOfCode": "class ProductBase(BaseModel):\n    title: str = Field(max_length=50)\n    type: str\n    price: int = Field(ge=1)\nclass ProductCreate(ProductBase):\n    pass\nclass ProductUpdate(ProductCreate):\n    title: str | None = None\n    type: str | None = None\n    price: int | None = None",
         "detail": "api_v1.product.schemas",
         "documentation": {}
     },
