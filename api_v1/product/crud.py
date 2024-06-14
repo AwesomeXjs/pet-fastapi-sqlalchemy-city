@@ -39,7 +39,7 @@ async def get_product_by_title(session: AsyncSession, title: str) -> Product:
 
 async def get_products_by_shop(session: AsyncSession, title: str) -> list[Product]:
     query = select(Shop).where(Shop.title == title).options(selectinload(Shop.products))
-    result: Result = await session.execute(query)
+    result = await session.execute(query)
     shop = result.scalar()
     return shop.products
 

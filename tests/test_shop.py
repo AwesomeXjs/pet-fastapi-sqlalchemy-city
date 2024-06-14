@@ -1,10 +1,8 @@
-from urllib import response
-from requests import session
-from sqlalchemy import insert, select, delete
+from sqlalchemy import insert
 
-from core import Shop, Person
+from core import Shop
 from httpx import AsyncClient
-from conftest import client, db_helper_test
+from conftest import db_helper_test
 
 
 async def test_create_shop(ac: AsyncClient):

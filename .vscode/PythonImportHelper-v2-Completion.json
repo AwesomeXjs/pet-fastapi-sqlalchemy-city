@@ -257,22 +257,6 @@
         "documentation": {}
     },
     {
-        "label": "select",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "delete",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
         "label": "insert",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -281,15 +265,7 @@
         "documentation": {}
     },
     {
-        "label": "select",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "delete",
+        "label": "insert",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -433,14 +409,6 @@
         "documentation": {}
     },
     {
-        "label": "Shop",
-        "importPath": "core",
-        "description": "core",
-        "isExtraImport": true,
-        "detail": "core",
-        "documentation": {}
-    },
-    {
         "label": "Person",
         "importPath": "core",
         "description": "core",
@@ -457,7 +425,15 @@
         "documentation": {}
     },
     {
-        "label": "Person",
+        "label": "Product",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "Shop",
         "importPath": "core",
         "description": "core",
         "isExtraImport": true,
@@ -1243,6 +1219,14 @@
         "documentation": {}
     },
     {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
         "label": "NullPool",
         "importPath": "sqlalchemy.pool",
         "description": "sqlalchemy.pool",
@@ -1283,39 +1267,7 @@
         "documentation": {}
     },
     {
-        "label": "response",
-        "importPath": "urllib",
-        "description": "urllib",
-        "isExtraImport": true,
-        "detail": "urllib",
-        "documentation": {}
-    },
-    {
-        "label": "response",
-        "importPath": "urllib",
-        "description": "urllib",
-        "isExtraImport": true,
-        "detail": "urllib",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "requests",
-        "description": "requests",
-        "isExtraImport": true,
-        "detail": "requests",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "requests",
-        "description": "requests",
-        "isExtraImport": true,
-        "detail": "requests",
-        "documentation": {}
-    },
-    {
-        "label": "client",
+        "label": "db_helper_test",
         "importPath": "conftest",
         "description": "conftest",
         "isExtraImport": true,
@@ -1331,7 +1283,7 @@
         "documentation": {}
     },
     {
-        "label": "client",
+        "label": "db_helper_test",
         "importPath": "conftest",
         "description": "conftest",
         "isExtraImport": true,
@@ -1339,11 +1291,11 @@
         "documentation": {}
     },
     {
-        "label": "db_helper_test",
-        "importPath": "conftest",
-        "description": "conftest",
+        "label": "response",
+        "importPath": "urllib",
+        "description": "urllib",
         "isExtraImport": true,
-        "detail": "conftest",
+        "detail": "urllib",
         "documentation": {}
     },
     {
@@ -1672,7 +1624,7 @@
         "kind": 6,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "class DatabaseHelperTest:\n    def __init__(self, url, echo):\n        self.engine_test = create_async_engine(\n            url=url,\n            echo=echo,\n            poolclass=NullPool,\n        )\n        self.session_factory_test = async_sessionmaker(\n            bind=self.engine_test,\n            autoflush=False,",
+        "peekOfCode": "class DatabaseHelperTest:\n    def __init__(self, url, echo):\n        self.engine_test = create_async_engine(\n            url=url,\n            echo=True,\n            poolclass=NullPool,\n        )\n        self.session_factory_test = async_sessionmaker(\n            bind=self.engine_test,\n            autoflush=False,",
         "detail": "tests.conftest",
         "documentation": {}
     },

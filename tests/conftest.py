@@ -20,7 +20,7 @@ class DatabaseHelperTest:
     def __init__(self, url, echo):
         self.engine_test = create_async_engine(
             url=url,
-            echo=echo,
+            echo=True,
             poolclass=NullPool,
         )
         self.session_factory_test = async_sessionmaker(
@@ -36,6 +36,7 @@ class DatabaseHelperTest:
 
 
 db_helper_test = DatabaseHelperTest(url=settings.get_db_url_test, echo=False)
+
 app.dependency_overrides[db_helper.session_dependency] = (
     db_helper_test.session_dependency_test
 )

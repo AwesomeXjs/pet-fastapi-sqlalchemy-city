@@ -48,16 +48,30 @@ async def get_product(
     return product
 
 
-@router.get("/by_shop")
+@router.get(
+    "/by_shop",
+    response_model=list[ProductAll],
+)
 @cache(expire=60)
 async def get_products_by_shop(
     title: str,
     session: AsyncSession = Depends(db_helper.session_dependency),
 ):
-    return await crud.get_products_by_shop(
-        title=title,
-        session=session,
-    )
+    try:
+        result = await crud.get_products_by_shop(
+            title=title,
+            session=session,
+        )
+        if len(result):
+            return result
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="В Магазине не обнаружены продукты",
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail=f"Магазин {title} не найден"
+        )
 
 
 @router.get("/all_shops", response_model=list[ShopWithoutWorkers])
