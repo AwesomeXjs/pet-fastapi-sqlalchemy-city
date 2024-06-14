@@ -1227,6 +1227,14 @@
         "documentation": {}
     },
     {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "importPath": "api_v1",
         "description": "api_v1",
@@ -1563,7 +1571,7 @@
         "kind": 5,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "app.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n        await conn.run_sync(Base.metadata.create_all)\n    yield\n    # async with db_helper_test.engine_test.begin() as conn:",
+        "peekOfCode": "app.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n        await conn.run_sync(Base.metadata.create_all)\n    yield\n    async with db_helper_test.engine_test.begin() as conn:",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1581,7 +1589,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.include_router(api_v1_router)",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.include_router(api_v1_router)\norigins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n]\napp.add_middleware(\n    CORSMiddleware,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "origins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,",
         "detail": "main",
         "documentation": {}
     }

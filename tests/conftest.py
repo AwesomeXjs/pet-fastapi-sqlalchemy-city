@@ -48,8 +48,8 @@ async def prepare_database():
         await conn.run_sync(Base.metadata.drop_all)
         await conn.run_sync(Base.metadata.create_all)
     yield
-    # async with db_helper_test.engine_test.begin() as conn:
-    #     await conn.run_sync(Base.metadata.drop_all)
+    async with db_helper_test.engine_test.begin() as conn:
+        await conn.run_sync(Base.metadata.drop_all)
 
 
 # SETUP
