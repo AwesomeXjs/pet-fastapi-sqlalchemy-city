@@ -1,4 +1,3 @@
-from urllib import response
 from sqlalchemy import insert
 from httpx import AsyncClient
 from core import Shop, Product

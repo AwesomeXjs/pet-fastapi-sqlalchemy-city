@@ -1,9 +1,8 @@
-from sqlalchemy import Result, func, select
+from sqlalchemy import Result, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import joinedload, selectinload
 
 from core import Product, Shop
-from api_v1.shop.schemas import ShopWithId
 from .schemas import ProductCreate, ProductUpdate
 
 

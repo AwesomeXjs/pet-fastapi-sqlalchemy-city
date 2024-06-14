@@ -1,8 +1,7 @@
-from time import sleep
 from sqlalchemy import Result, select
+from sqlalchemy.orm import joinedload
 from fastapi import status, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import selectinload, joinedload
 
 from core import Shop, Person
 from .schemas import CreateShop, ShopAll, ShopWithId, UpdateShop

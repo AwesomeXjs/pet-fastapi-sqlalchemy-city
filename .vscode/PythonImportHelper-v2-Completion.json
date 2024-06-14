@@ -56,22 +56,6 @@
         "documentation": {}
     },
     {
-        "label": "TYPE_CHECKING",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncGenerator",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "AsyncGenerator",
         "importPath": "typing",
         "description": "typing",
@@ -154,14 +138,6 @@
     },
     {
         "label": "Result",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "func",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -441,22 +417,6 @@
         "documentation": {}
     },
     {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
         "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -562,14 +522,6 @@
     },
     {
         "label": "joinedload",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
-        "label": "selectinload",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -710,14 +662,6 @@
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
         "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncSession",
-        "importPath": "sqlalchemy.ext.asyncio",
-        "description": "sqlalchemy.ext.asyncio",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.ext.asyncio",
         "documentation": {}
     },
     {
@@ -1033,11 +977,19 @@
         "documentation": {}
     },
     {
-        "label": "ShopWithId",
-        "importPath": "api_v1.shop.schemas",
-        "description": "api_v1.shop.schemas",
+        "label": "Product",
+        "importPath": "core.models.product",
+        "description": "core.models.product",
         "isExtraImport": true,
-        "detail": "api_v1.shop.schemas",
+        "detail": "core.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "find_shop_depends",
+        "importPath": "api_v1.shop.dependencies",
+        "description": "api_v1.shop.dependencies",
+        "isExtraImport": true,
+        "detail": "api_v1.shop.dependencies",
         "documentation": {}
     },
     {
@@ -1054,38 +1006,6 @@
         "description": "api_v1.shop.schemas",
         "isExtraImport": true,
         "detail": "api_v1.shop.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "prod",
-        "importPath": "math",
-        "description": "math",
-        "isExtraImport": true,
-        "detail": "math",
-        "documentation": {}
-    },
-    {
-        "label": "radians",
-        "importPath": "math",
-        "description": "math",
-        "isExtraImport": true,
-        "detail": "math",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "core.models.product",
-        "description": "core.models.product",
-        "isExtraImport": true,
-        "detail": "core.models.product",
-        "documentation": {}
-    },
-    {
-        "label": "find_shop_depends",
-        "importPath": "api_v1.shop.dependencies",
-        "description": "api_v1.shop.dependencies",
-        "isExtraImport": true,
-        "detail": "api_v1.shop.dependencies",
         "documentation": {}
     },
     {
@@ -1288,14 +1208,6 @@
         "description": "conftest",
         "isExtraImport": true,
         "detail": "conftest",
-        "documentation": {}
-    },
-    {
-        "label": "response",
-        "importPath": "urllib",
-        "description": "urllib",
-        "isExtraImport": true,
-        "detail": "urllib",
         "documentation": {}
     },
     {

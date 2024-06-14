@@ -1,4 +1,3 @@
-from math import prod, radians
 from fastapi_cache.decorator import cache
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import APIRouter, Depends, HTTPException, status

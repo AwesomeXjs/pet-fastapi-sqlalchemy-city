@@ -1,6 +1,5 @@
-from sqlalchemy import insert
-
 from core import Shop
+from sqlalchemy import insert
 from httpx import AsyncClient
 from conftest import db_helper_test
 

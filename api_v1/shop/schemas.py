@@ -1,5 +1,3 @@
-from typing import TYPE_CHECKING
-
 from api_v1.person.schemas import Person
 from pydantic import BaseModel, ConfigDict, Field
 
