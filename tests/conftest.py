@@ -20,7 +20,7 @@ class DatabaseHelperTest:
     def __init__(self, url, echo):
         self.engine_test = create_async_engine(
             url=url,
-            echo=True,
+            echo=False,
             poolclass=NullPool,
         )
         self.session_factory_test = async_sessionmaker(

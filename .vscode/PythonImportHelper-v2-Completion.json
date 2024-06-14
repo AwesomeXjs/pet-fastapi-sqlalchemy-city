@@ -1536,7 +1536,7 @@
         "kind": 6,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "class DatabaseHelperTest:\n    def __init__(self, url, echo):\n        self.engine_test = create_async_engine(\n            url=url,\n            echo=True,\n            poolclass=NullPool,\n        )\n        self.session_factory_test = async_sessionmaker(\n            bind=self.engine_test,\n            autoflush=False,",
+        "peekOfCode": "class DatabaseHelperTest:\n    def __init__(self, url, echo):\n        self.engine_test = create_async_engine(\n            url=url,\n            echo=False,\n            poolclass=NullPool,\n        )\n        self.session_factory_test = async_sessionmaker(\n            bind=self.engine_test,\n            autoflush=False,",
         "detail": "tests.conftest",
         "documentation": {}
     },

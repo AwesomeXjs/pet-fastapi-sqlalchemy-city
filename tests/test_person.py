@@ -103,15 +103,3 @@ async def test_delete_person_by_email(ac: AsyncClient):
         "/person/email", params={"person_email": "eamex@gmail.com"}
     )
     assert response.status_code == 204, "Персона не удалена по email"
-
-
-# SHOP
-# async def test_add_work_to_person(ac: AsyncClient):
-#     response = await ac.post(
-#         "/shop/work", params={"shop_title": "DNS", "person_email": "user@example.com"}
-#     )
-#     assert (
-#         response.json()["details"]
-#         == "Пользователь string устроился на работу в магазин DNS"
-#     )
-#     assert response.status_code == 202
