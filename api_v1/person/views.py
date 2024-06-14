@@ -1,6 +1,5 @@
 from typing import List
 
-from pydantic import EmailStr
 from fastapi_cache.decorator import cache
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -11,7 +10,6 @@ from .dependencies import find_person_by_id, find_person_by_email
 from .schemas import (
     Person,
     PersonSchemaCreate,
-    PersonSchemaUpdate,
     PersonSchemaUpdatePartial,
 )
 

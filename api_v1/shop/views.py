@@ -1,4 +1,3 @@
-from pydantic import EmailStr
 from fastapi_cache.decorator import cache
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import HTTPException, status, Depends, APIRouter
@@ -9,11 +8,9 @@ from api_v1.person.schemas import Person
 from .dependencies import find_shop_depends
 from .schemas import (
     ShopAll,
-    ShopBase,
     CreateShop,
     ShopWithId,
     UpdateShop,
-    ShopWithoutWorkers,
 )
 from api_v1.person.dependencies import find_person_by_email
 

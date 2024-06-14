@@ -72,6 +72,14 @@
         "documentation": {}
     },
     {
+        "label": "AsyncGenerator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "op",
         "importPath": "alembic",
         "description": "alembic",
@@ -337,11 +345,27 @@
         "documentation": {}
     },
     {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
+        "label": "settings",
+        "importPath": "core",
+        "description": "core",
         "isExtraImport": true,
-        "detail": "time",
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
         "documentation": {}
     },
     {
@@ -353,43 +377,11 @@
         "documentation": {}
     },
     {
-        "label": "EmailStr",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
         "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "EmailStr",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigDict",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -433,6 +425,14 @@
         "documentation": {}
     },
     {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -457,7 +457,23 @@
         "documentation": {}
     },
     {
-        "label": "EmailStr",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -698,6 +714,22 @@
     },
     {
         "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "async_sessionmaker",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_async_engine",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
         "isExtraImport": true,
@@ -1017,6 +1049,48 @@
         "documentation": {}
     },
     {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
+        "isExtraImport": true,
+        "detail": "fastapi.testclient",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "AsyncIterator",
         "importPath": "collections.abc",
         "description": "collections.abc",
@@ -1330,7 +1404,7 @@
         "kind": 6,
         "importPath": "core.config",
         "description": "core.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    @property\n    def get_db_url(self):\n        return f\"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}\"\n    model_config = SettingsConfigDict(env_file=\".env\")",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    @property\n    def get_db_url(self):\n        return f\"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}\"",
         "detail": "core.config",
         "documentation": {}
     },
@@ -1359,6 +1433,60 @@
         "description": "core.db_helper",
         "peekOfCode": "db_helper = DatabaseHelper(url=settings.get_db_url, echo=True)",
         "detail": "core.db_helper",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseHelperTest",
+        "kind": 6,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "class DatabaseHelperTest:\n    def __init__(self, url, echo):\n        self.engine_test = create_async_engine(\n            url=url,\n            echo=echo,\n            pool_size=5,\n            max_overflow=10,\n        )\n        self.session_factory_test = async_sessionmaker(\n            bind=self.engine_test,",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "event_loop",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def event_loop(request):\n    loop = asyncio.get_event_loop_policy().new_event_loop()\n    yield loop\n    loop.close()\nclient = TestClient(app)\n@pytest.fixture(scope=\"session\")\nasync def ac() -> AsyncGenerator[AsyncClient, None]:\n    async with AsyncClient(app=app, base_url=\"http://test\") as ac:\n        yield ac",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper_test",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "db_helper_test = DatabaseHelperTest(url=settings.get_db_url_test, echo=True)\napp.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\nasync def init_db():\n    Base.metadata.create_all(bind=db_helper_test.engine_test)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.create_all)",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[db_helper.session_dependency]",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "app.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\nasync def init_db():\n    Base.metadata.create_all(bind=db_helper_test.engine_test)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.create_all)\n    yield",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "client = TestClient(app)\n@pytest.fixture(scope=\"session\")\nasync def ac() -> AsyncGenerator[AsyncClient, None]:\n    async with AsyncClient(app=app, base_url=\"http://test\") as ac:\n        yield ac",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "test_person",
+        "kind": 2,
+        "importPath": "tests.test_person",
+        "description": "tests.test_person",
+        "peekOfCode": "def test_person():\n    assert 1 == 1",
+        "detail": "tests.test_person",
         "documentation": {}
     },
     {
