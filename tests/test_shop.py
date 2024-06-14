@@ -11,13 +11,13 @@ async def test_create_shop(ac: AsyncClient):
     response = await ac.post(
         "/shop/", json={"title": "DNS", "rating": 3, "compensation": 10_000}
     )
-    assert response.status_code == 201
+    assert response.status_code == 201, "Магазин не создан"
     assert response.json()["title"] == "DNS"
 
 
 async def test_get_shop(ac: AsyncClient):
     response = await ac.get("/shop/", params={"shop_title": "DNS"})
-    assert response.status_code == 200
+    assert response.status_code == 200, "Магазин не найден"
     assert response.json()["title"] == "DNS"
 
 
@@ -27,7 +27,7 @@ async def test_update_shop(ac: AsyncClient):
         params={"shop_title": "DNS"},
         json={"title": "Sulpak", "compensation": 180},
     )
-    assert response.status_code == 200
+    assert response.status_code == 200, "Магазин не обновлен"
     assert response.json()["title"] == "Sulpak"
 
 
@@ -41,7 +41,7 @@ async def test_delete_shop(ac: AsyncClient):
         "/shop/",
         params={"shop_title": "Mechta"},
     )
-    assert response.status_code == 204
+    assert response.status_code == 204, "Магазин не удален"
 
 
 async def test_work_registration(ac: AsyncClient):
@@ -53,7 +53,7 @@ async def test_work_registration(ac: AsyncClient):
 
 async def test_get_shop_workers(ac: AsyncClient):
     response = await ac.get("/shop/shop_workers", params={"title": "Sulpak"})
-    assert response.status_code == 200
+    assert response.status_code == 200, "Работа не присвоена воркеру"
     assert len(response.json()) > 0
 
 
@@ -61,13 +61,13 @@ async def test_get_work_of_person(ac: AsyncClient):
     response = await ac.get(
         "/shop/work_of_person/{email}", params={"person_email": "react@gmail.com"}
     )
-    assert response.status_code == 202
+    assert response.status_code == 202, "Работа у работника не найдена"
     assert response.json() == "Sulpak"
 
 
 async def test_get_all_persons_with_works(ac: AsyncClient):
     response = await ac.get("/shop/persons_with_shops")
-    assert response.status_code == 200
+    assert response.status_code == 200, "Персоны с работами не найдены"
     assert len(response.json()) > 0
 
 
@@ -81,7 +81,7 @@ async def test_update_workplace_for_person(ac: AsyncClient):
         "/shop/update_workplace",
         params={"shop_title": "DNS", "person_email": "react@gmail.com"},
     )
-    assert response.status_code == 200
+    assert response.status_code == 200, "Место работы не обновлено"
     # assert response.json()["work_place_name"] == "DNS"
 
 
@@ -89,4 +89,4 @@ async def test_delete_workplace_of_person(ac: AsyncClient):
     response = await ac.delete(
         "/shop/work_place", params={"person_email": "react@gmail.com"}
     )
-    assert response.status_code == 204
+    assert response.status_code == 204, "Место работы у персоны не удалено"

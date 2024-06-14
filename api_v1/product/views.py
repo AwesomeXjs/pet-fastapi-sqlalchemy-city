@@ -1,7 +1,7 @@
-from math import prod
-from fastapi import APIRouter, Depends
+from math import prod, radians
 from fastapi_cache.decorator import cache
 from sqlalchemy.ext.asyncio import AsyncSession
+from fastapi import APIRouter, Depends, HTTPException, status
 
 from . import crud
 from core import db_helper
@@ -64,7 +64,13 @@ async def get_products_by_shop(
 async def get_all_shops_with_products(
     session: AsyncSession = Depends(db_helper.session_dependency),
 ):
-    return await crud.get_all_shops_with_all_products(session=session)
+    result = await crud.get_all_shops_with_all_products(session=session)
+    if len(result) > 0:
+        return result
+    raise HTTPException(
+        status_code=status.HTTP_404_NOT_FOUND,
+        detail=f"Магазины с продуктами не найдены",
+    )
 
 
 # UPDATE

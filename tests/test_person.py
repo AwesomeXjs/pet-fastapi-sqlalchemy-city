@@ -18,7 +18,7 @@ async def test_add_person(ac: AsyncClient):
             "email": "react@gmail.com",
         },
     )
-    assert response.status_code == 201
+    assert response.status_code == 201, "Персона не добавлена"
 
 
 async def test_get_person_by_email(ac: AsyncClient):
@@ -26,7 +26,7 @@ async def test_get_person_by_email(ac: AsyncClient):
         "/person/",
         params={"person_email": "react@gmail.com"},
     )
-    assert response.status_code == 200
+    assert response.status_code == 200, "Персона не найдена по email"
     assert response.json()["email"] == "react@gmail.com"
 
 
@@ -36,7 +36,7 @@ async def test_update_person(ac: AsyncClient):
         params={"person_email": "react@gmail.com"},
         json={"username": "ReactX"},
     )
-    assert response.status_code == 200
+    assert response.status_code == 200, "Персона не обновлена"
     assert response.json()["username"] == "ReactX"
 
 
@@ -59,16 +59,17 @@ async def test_create_all_persons(ac: AsyncClient):
         "/person/all_persons",
         json=[person_one, person_two],
     )
-    assert response.status_code == 200
+    assert response.status_code == 200, "Список персон не добавлен"
 
 
 async def test_get_all_persons(ac: AsyncClient):
     response = await ac.get("/person/all")
+    assert response.status_code == 200, "Персоны не найдены"
 
 
 async def test_get_person_by_id(ac: AsyncClient):
     response = await ac.get("/person/{id}", params={"person_id": 1})
-    assert response.status_code == 200
+    assert response.status_code == 200, "Персона не найдена по id"
     assert response.json()["username"] == "ReactX"
 
 
@@ -86,7 +87,7 @@ async def test_delete_person_by_id(ac: AsyncClient):
         await session.commit()
 
     response = await ac.delete("/person/", params={"person_id": 2})
-    assert response.status_code == 204
+    assert response.status_code == 204, "Персона не удалена по id"
 
 
 async def test_delete_person_by_email(ac: AsyncClient):
@@ -104,7 +105,7 @@ async def test_delete_person_by_email(ac: AsyncClient):
     response = await ac.delete(
         "/person/email", params={"person_email": "eamex@gmail.com"}
     )
-    assert response.status_code == 204
+    assert response.status_code == 204, "Персона не удалена по email"
 
 
 # SHOP

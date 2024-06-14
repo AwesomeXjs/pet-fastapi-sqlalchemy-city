@@ -1,4 +1,4 @@
-from sqlalchemy import Result, select
+from sqlalchemy import Result, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import joinedload, selectinload
 
@@ -48,8 +48,7 @@ async def get_all_shops_with_all_products(session: AsyncSession) -> list[Shop]:
     query = select(Shop).options(selectinload(Shop.products))
     res = await session.execute(query)
     shops = res.scalars().all()
-    print(shops)
-    return shops
+    return [shop for shop in shops if len(shop.products) > 0]
 
 
 # UPDATE
