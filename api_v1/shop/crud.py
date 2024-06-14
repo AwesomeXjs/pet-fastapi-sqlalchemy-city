@@ -37,6 +37,7 @@ async def work_registration(session: AsyncSession, person: Person, shop: Shop):
     if person.work_place_name is None:
         setattr(person, "work_place_name", shop.title)
         await session.commit()
+        # return person
         return {
             "status": "accept",
             "details": f"Пользователь {person.username} устроился на работу в магазин {shop.title}",
@@ -50,7 +51,6 @@ async def work_registration(session: AsyncSession, person: Person, shop: Shop):
 
 
 async def get_work_by_person(person: Person):
-    sleep(2)
     return person.work_place_name
 
 

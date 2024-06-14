@@ -1,12 +1,15 @@
 import pytest
 import asyncio
-from typing import AsyncGenerator, Generator, Iterator
+from fastapi_cache import FastAPICache
+from typing import AsyncGenerator, Iterator
+from fastapi_cache.backends.redis import RedisBackend
 from sqlalchemy.ext.asyncio import (
     async_sessionmaker,
     create_async_engine,
 )
 from httpx import AsyncClient
 from sqlalchemy.pool import NullPool
+from redis import asyncio as aioredis
 from fastapi.testclient import TestClient
 
 from main import app
@@ -44,8 +47,8 @@ async def prepare_database():
         await conn.run_sync(Base.metadata.drop_all)
         await conn.run_sync(Base.metadata.create_all)
     yield
-    async with db_helper_test.engine_test.begin() as conn:
-        await conn.run_sync(Base.metadata.drop_all)
+    # async with db_helper_test.engine_test.begin() as conn:
+    #     await conn.run_sync(Base.metadata.drop_all)
 
 
 # SETUP
@@ -62,4 +65,6 @@ client = TestClient(app)
 @pytest.fixture(scope="session")
 async def ac() -> AsyncGenerator[AsyncClient, None]:
     async with AsyncClient(app=app, base_url="http://test") as ac:
+        redis = aioredis.from_url("redis://localhost")
+        FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
         yield ac

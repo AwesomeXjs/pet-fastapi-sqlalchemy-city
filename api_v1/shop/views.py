@@ -96,7 +96,7 @@ async def get_work_of_person(person: Person = Depends(find_person_by_email)):
     )
 
 
-@router.get("/persons_with_shops")
+@router.get("/persons_with_shops", response_model=list[Person])
 async def get_all_persons_with_works(
     session: AsyncSession = Depends(db_helper.session_dependency),
 ):
@@ -129,7 +129,7 @@ async def update_workplace_for_person(
     )
 
 
-@router.delete("/")
+@router.delete("/", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_shop(
     session: AsyncSession = Depends(db_helper.session_dependency),
     shop: ShopAll = Depends(find_shop_depends),
@@ -137,7 +137,7 @@ async def delete_shop(
     return await crud.delete_shop(session=session, shop=shop)
 
 
-@router.delete("/work_place")
+@router.delete("/work_place", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_work_place_of_person(
     session: AsyncSession = Depends(db_helper.session_dependency),
     person: Person = Depends(find_person_by_email),
