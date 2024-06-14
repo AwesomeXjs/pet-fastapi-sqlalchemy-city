@@ -1,11 +1,12 @@
 import pytest
 import asyncio
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Generator, Iterator
 from sqlalchemy.ext.asyncio import (
     async_sessionmaker,
     create_async_engine,
 )
 from httpx import AsyncClient
+from sqlalchemy.pool import NullPool
 from fastapi.testclient import TestClient
 
 from main import app
@@ -17,8 +18,7 @@ class DatabaseHelperTest:
         self.engine_test = create_async_engine(
             url=url,
             echo=echo,
-            pool_size=5,
-            max_overflow=10,
+            poolclass=NullPool,
         )
         self.session_factory_test = async_sessionmaker(
             bind=self.engine_test,
@@ -32,19 +32,16 @@ class DatabaseHelperTest:
             await sess.close()
 
 
-db_helper_test = DatabaseHelperTest(url=settings.get_db_url_test, echo=True)
+db_helper_test = DatabaseHelperTest(url=settings.get_db_url_test, echo=False)
 app.dependency_overrides[db_helper.session_dependency] = (
     db_helper_test.session_dependency_test
 )
 
 
-async def init_db():
-    Base.metadata.create_all(bind=db_helper_test.engine_test)
-
-
 @pytest.fixture(autouse=True, scope="session")
 async def prepare_database():
     async with db_helper_test.engine_test.begin() as conn:
+        await conn.run_sync(Base.metadata.drop_all)
         await conn.run_sync(Base.metadata.create_all)
     yield
     async with db_helper_test.engine_test.begin() as conn:
@@ -53,7 +50,7 @@ async def prepare_database():
 
 # SETUP
 @pytest.fixture(scope="session")
-def event_loop(request):
+def event_loop(request: pytest.FixtureRequest) -> Iterator[asyncio.AbstractEventLoop]:
     loop = asyncio.get_event_loop_policy().new_event_loop()
     yield loop
     loop.close()

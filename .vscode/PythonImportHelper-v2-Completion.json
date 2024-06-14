@@ -80,6 +80,22 @@
         "documentation": {}
     },
     {
+        "label": "Generator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "op",
         "importPath": "alembic",
         "description": "alembic",
@@ -233,6 +249,30 @@
         "documentation": {}
     },
     {
+        "label": "insert",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "fileConfig",
         "importPath": "logging.config",
         "description": "logging.config",
@@ -362,6 +402,14 @@
     },
     {
         "label": "db_helper",
+        "importPath": "core",
+        "description": "core",
+        "isExtraImport": true,
+        "detail": "core",
+        "documentation": {}
+    },
+    {
+        "label": "Shop",
         "importPath": "core",
         "description": "core",
         "isExtraImport": true,
@@ -1075,6 +1123,14 @@
         "documentation": {}
     },
     {
+        "label": "NullPool",
+        "importPath": "sqlalchemy.pool",
+        "description": "sqlalchemy.pool",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.pool",
+        "documentation": {}
+    },
+    {
         "label": "TestClient",
         "importPath": "fastapi.testclient",
         "description": "fastapi.testclient",
@@ -1088,6 +1144,22 @@
         "description": "main",
         "isExtraImport": true,
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "importPath": "conftest",
+        "description": "conftest",
+        "isExtraImport": true,
+        "detail": "conftest",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper_test",
+        "importPath": "conftest",
+        "description": "conftest",
+        "isExtraImport": true,
+        "detail": "conftest",
         "documentation": {}
     },
     {
@@ -1359,7 +1431,7 @@
         "kind": 6,
         "importPath": "core.models.base",
         "description": "core.models.base",
-        "peekOfCode": "class Base(DeclarativeBase):\n    __abstract__ = True\n    @declared_attr.directive\n    def __tablename__(cls) -> str:\n        return f\"{cls.__name__.lower()}s\"",
+        "peekOfCode": "class Base(DeclarativeBase):\n    __abstract__ = True\n    @declared_attr.directive\n    def __tablename__(cls) -> str:\n        return f\"{cls.__name__.lower()}s\"\n    def __repr__(self) -> str:\n        cols = []\n        for col in self.__table__.columns.keys():\n            cols.append(f\"{col}:{getattr(self, col)}\")\n        return f\"<{self.__class__.__name__}{\",\".join(cols)}>\"",
         "detail": "core.models.base",
         "documentation": {}
     },
@@ -1440,7 +1512,7 @@
         "kind": 6,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "class DatabaseHelperTest:\n    def __init__(self, url, echo):\n        self.engine_test = create_async_engine(\n            url=url,\n            echo=echo,\n            pool_size=5,\n            max_overflow=10,\n        )\n        self.session_factory_test = async_sessionmaker(\n            bind=self.engine_test,",
+        "peekOfCode": "class DatabaseHelperTest:\n    def __init__(self, url, echo):\n        self.engine_test = create_async_engine(\n            url=url,\n            echo=echo,\n            poolclass=NullPool,\n        )\n        self.session_factory_test = async_sessionmaker(\n            bind=self.engine_test,\n            autoflush=False,",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1449,7 +1521,7 @@
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def event_loop(request):\n    loop = asyncio.get_event_loop_policy().new_event_loop()\n    yield loop\n    loop.close()\nclient = TestClient(app)\n@pytest.fixture(scope=\"session\")\nasync def ac() -> AsyncGenerator[AsyncClient, None]:\n    async with AsyncClient(app=app, base_url=\"http://test\") as ac:\n        yield ac",
+        "peekOfCode": "def event_loop(request: pytest.FixtureRequest) -> Iterator[asyncio.AbstractEventLoop]:\n    loop = asyncio.get_event_loop_policy().new_event_loop()\n    yield loop\n    loop.close()\nclient = TestClient(app)\n@pytest.fixture(scope=\"session\")\nasync def ac() -> AsyncGenerator[AsyncClient, None]:\n    async with AsyncClient(app=app, base_url=\"http://test\") as ac:\n        yield ac",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1458,7 +1530,7 @@
         "kind": 5,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "db_helper_test = DatabaseHelperTest(url=settings.get_db_url_test, echo=True)\napp.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\nasync def init_db():\n    Base.metadata.create_all(bind=db_helper_test.engine_test)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.create_all)",
+        "peekOfCode": "db_helper_test = DatabaseHelperTest(url=settings.get_db_url_test, echo=False)\napp.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n        await conn.run_sync(Base.metadata.create_all)\n    yield",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1467,7 +1539,7 @@
         "kind": 5,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "app.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\nasync def init_db():\n    Base.metadata.create_all(bind=db_helper_test.engine_test)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.create_all)\n    yield",
+        "peekOfCode": "app.dependency_overrides[db_helper.session_dependency] = (\n    db_helper_test.session_dependency_test\n)\n@pytest.fixture(autouse=True, scope=\"session\")\nasync def prepare_database():\n    async with db_helper_test.engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n        await conn.run_sync(Base.metadata.create_all)\n    yield\n    async with db_helper_test.engine_test.begin() as conn:",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1478,15 +1550,6 @@
         "description": "tests.conftest",
         "peekOfCode": "client = TestClient(app)\n@pytest.fixture(scope=\"session\")\nasync def ac() -> AsyncGenerator[AsyncClient, None]:\n    async with AsyncClient(app=app, base_url=\"http://test\") as ac:\n        yield ac",
         "detail": "tests.conftest",
-        "documentation": {}
-    },
-    {
-        "label": "test_person",
-        "kind": 2,
-        "importPath": "tests.test_person",
-        "description": "tests.test_person",
-        "peekOfCode": "def test_person():\n    assert 1 == 1",
-        "detail": "tests.test_person",
         "documentation": {}
     },
     {
