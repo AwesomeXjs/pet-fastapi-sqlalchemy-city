@@ -945,6 +945,22 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -1062,6 +1078,14 @@
         "description": "pydantic_settings",
         "isExtraImport": true,
         "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "Jinja2Templates",
+        "importPath": "fastapi.templating",
+        "description": "fastapi.templating",
+        "isExtraImport": true,
+        "detail": "fastapi.templating",
         "documentation": {}
     },
     {
@@ -1227,19 +1251,27 @@
         "documentation": {}
     },
     {
-        "label": "CORSMiddleware",
-        "importPath": "fastapi.middleware.cors",
-        "description": "fastapi.middleware.cors",
-        "isExtraImport": true,
-        "detail": "fastapi.middleware.cors",
-        "documentation": {}
-    },
-    {
         "label": "router",
         "importPath": "api_v1",
         "description": "api_v1",
         "isExtraImport": true,
         "detail": "api_v1",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "pages.router",
+        "description": "pages.router",
+        "isExtraImport": true,
+        "detail": "pages.router",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
         "documentation": {}
     },
     {
@@ -1540,6 +1572,33 @@
         "documentation": {}
     },
     {
+        "label": "get_base_template",
+        "kind": 2,
+        "importPath": "pages.router",
+        "description": "pages.router",
+        "peekOfCode": "def get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})",
+        "detail": "pages.router",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "pages.router",
+        "description": "pages.router",
+        "peekOfCode": "router = APIRouter(prefix=\"/pages\", tags=[\"Pages\"])\ntemplates = Jinja2Templates(directory=\"templates\")\n@router.get(\"/base\")\ndef get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})",
+        "detail": "pages.router",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "pages.router",
+        "description": "pages.router",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"templates\")\n@router.get(\"/base\")\ndef get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})",
+        "detail": "pages.router",
+        "documentation": {}
+    },
+    {
         "label": "DatabaseHelperTest",
         "kind": 6,
         "importPath": "tests.conftest",
@@ -1589,7 +1648,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.include_router(api_v1_router)\norigins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n]\napp.add_middleware(\n    CORSMiddleware,",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.include_router(api_v1_router)\napp.include_router(router_pages)\norigins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n]\napp.add_middleware(",
         "detail": "main",
         "documentation": {}
     },

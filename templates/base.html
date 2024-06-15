@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	{% block head %}{% endblock %}
+	<title>Welcome to city!</title>
+</head>
+<body>
+	<nav class="flex justify-between text-3xl my-3">
+        <ul class="flex ml-10">
+            <li>Welcome!</li>
+        </ul>
+        <ul class="flex gap-5 mr-10">
+            <li>Pet</li>
+            <li>Project</li>
+        </ul>
+    </nav>
+    <hr>
+
+	 <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
