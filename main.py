@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from redis import asyncio as aioredis
 from fastapi_cache import FastAPICache
 from api_v1 import router as api_v1_router
+from fastapi.staticfiles import StaticFiles
 from pages.router import router as router_pages
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_cache.backends.redis import RedisBackend
@@ -18,6 +19,11 @@ async def lifespan(_: FastAPI) -> AsyncIterator[None]:
 
 
 app = FastAPI(title="Welcome to City", lifespan=lifespan)
+app.mount(
+    "/static",
+    StaticFiles(directory="static"),
+    name="static",
+)
 app.include_router(api_v1_router)
 app.include_router(router_pages)
 

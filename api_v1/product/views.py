@@ -48,7 +48,7 @@ async def get_product(
 
 
 @router.get(
-    "/by_shop",
+    "/by_shop/{title}",
     response_model=list[ProductAll],
 )
 @cache(expire=60)

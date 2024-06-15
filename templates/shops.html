@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% for shop in shops  %}
+<div>
+	<h1>{{shop.title}} с рейтингом {{shop.rating}} имеет продукты:</h1>
+	{% for product in shop.products %}
+	<h3>{{product.title}}</h3>
+	{% endfor %}
+</div>
+{% endfor %}
+{% endblock content %}

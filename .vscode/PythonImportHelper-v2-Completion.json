@@ -953,6 +953,14 @@
         "documentation": {}
     },
     {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Request",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -1001,6 +1009,14 @@
         "documentation": {}
     },
     {
+        "label": "Product",
+        "importPath": "core.models.product",
+        "description": "core.models.product",
+        "isExtraImport": true,
+        "detail": "core.models.product",
+        "documentation": {}
+    },
+    {
         "label": "find_shop_depends",
         "importPath": "api_v1.shop.dependencies",
         "description": "api_v1.shop.dependencies",
@@ -1025,6 +1041,14 @@
         "documentation": {}
     },
     {
+        "label": "ShopAll",
+        "importPath": "api_v1.shop.schemas",
+        "description": "api_v1.shop.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.shop.schemas",
+        "documentation": {}
+    },
+    {
         "label": "Person",
         "importPath": "api_v1.person.schemas",
         "description": "api_v1.person.schemas",
@@ -1038,6 +1062,14 @@
         "description": "api_v1.person.schemas",
         "isExtraImport": true,
         "detail": "api_v1.person.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ProductAll",
+        "importPath": "api_v1.product.schemas",
+        "description": "api_v1.product.schemas",
+        "isExtraImport": true,
+        "detail": "api_v1.product.schemas",
         "documentation": {}
     },
     {
@@ -1086,6 +1118,14 @@
         "description": "fastapi.templating",
         "isExtraImport": true,
         "detail": "fastapi.templating",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_shops_with_products",
+        "importPath": "api_v1.product.views",
+        "description": "api_v1.product.views",
+        "isExtraImport": true,
+        "detail": "api_v1.product.views",
         "documentation": {}
     },
     {
@@ -1256,6 +1296,14 @@
         "description": "api_v1",
         "isExtraImport": true,
         "detail": "api_v1",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
         "documentation": {}
     },
     {
@@ -1576,7 +1624,16 @@
         "kind": 2,
         "importPath": "pages.router",
         "description": "pages.router",
-        "peekOfCode": "def get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})",
+        "peekOfCode": "def get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})\n@router.get(\"/shops\")\ndef get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(\n        \"shops.html\", {\"request\": request, \"shops\": shops}\n    )",
+        "detail": "pages.router",
+        "documentation": {}
+    },
+    {
+        "label": "get_shops_with_prods",
+        "kind": 2,
+        "importPath": "pages.router",
+        "description": "pages.router",
+        "peekOfCode": "def get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(\n        \"shops.html\", {\"request\": request, \"shops\": shops}\n    )",
         "detail": "pages.router",
         "documentation": {}
     },
@@ -1585,7 +1642,7 @@
         "kind": 5,
         "importPath": "pages.router",
         "description": "pages.router",
-        "peekOfCode": "router = APIRouter(prefix=\"/pages\", tags=[\"Pages\"])\ntemplates = Jinja2Templates(directory=\"templates\")\n@router.get(\"/base\")\ndef get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})",
+        "peekOfCode": "router = APIRouter(prefix=\"/pages\", tags=[\"Pages\"])\ntemplates = Jinja2Templates(directory=\"templates\")\n@router.get(\"/base\")\ndef get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})\n@router.get(\"/shops\")\ndef get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(",
         "detail": "pages.router",
         "documentation": {}
     },
@@ -1594,7 +1651,7 @@
         "kind": 5,
         "importPath": "pages.router",
         "description": "pages.router",
-        "peekOfCode": "templates = Jinja2Templates(directory=\"templates\")\n@router.get(\"/base\")\ndef get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"templates\")\n@router.get(\"/base\")\ndef get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})\n@router.get(\"/shops\")\ndef get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(\n        \"shops.html\", {\"request\": request, \"shops\": shops}",
         "detail": "pages.router",
         "documentation": {}
     },
@@ -1648,7 +1705,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.include_router(api_v1_router)\napp.include_router(router_pages)\norigins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n]\napp.add_middleware(",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.mount(\n    \"/static\",\n    StaticFiles(directory=\"static\"),\n    name=\"static\",\n)\napp.include_router(api_v1_router)\napp.include_router(router_pages)\norigins = [\n    \"http://localhost.tiangolo.com\",",
         "detail": "main",
         "documentation": {}
     },
