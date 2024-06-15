@@ -24,3 +24,11 @@ def get_shops_with_prods(
     return templates.TemplateResponse(
         "shops.html", {"request": request, "shops": shops}
     )
+
+
+@router.get("/chat")
+def get_chat_page(request: Request):
+    return templates.TemplateResponse("chat.html", {"request": request})
+
+
+# 	<img width=150 src="{{url_for('static', path='img_1.png')}}" alt="img" class="img_class">

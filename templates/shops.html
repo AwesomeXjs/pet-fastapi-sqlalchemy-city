@@ -5,14 +5,11 @@
 {% for shop in shops  %}
 <div>
 	<h1>{{shop.title}} с рейтингом {{shop.rating}} имеет продукты:</h1>
-	{% comment %} 
 	
-		<img width=150 src="{{url_for('static', path='img_1.png')}}" alt="img" class="img_class">
-	
-	{% endcomment %}
 	{% for product in shop.products %}
 	<h3>{{product.title}}</h3>
-	{% endfor %}
+	{% endfor %} 
 </div>
 {% endfor %}
 {% endblock content %}
+

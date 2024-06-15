@@ -969,6 +969,30 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocket",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocketDisconnect",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -1275,6 +1299,14 @@
         "documentation": {}
     },
     {
+        "label": "HTMLResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
         "label": "AsyncIterator",
         "importPath": "collections.abc",
         "description": "collections.abc",
@@ -1291,14 +1323,6 @@
         "documentation": {}
     },
     {
-        "label": "router",
-        "importPath": "api_v1",
-        "description": "api_v1",
-        "isExtraImport": true,
-        "detail": "api_v1",
-        "documentation": {}
-    },
-    {
         "label": "StaticFiles",
         "importPath": "fastapi.staticfiles",
         "description": "fastapi.staticfiles",
@@ -1307,19 +1331,35 @@
         "documentation": {}
     },
     {
-        "label": "router",
-        "importPath": "pages.router",
-        "description": "pages.router",
-        "isExtraImport": true,
-        "detail": "pages.router",
-        "documentation": {}
-    },
-    {
         "label": "CORSMiddleware",
         "importPath": "fastapi.middleware.cors",
         "description": "fastapi.middleware.cors",
         "isExtraImport": true,
         "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "api_v1",
+        "description": "api_v1",
+        "isExtraImport": true,
+        "detail": "api_v1",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "ws_chat.router",
+        "description": "ws_chat.router",
+        "isExtraImport": true,
+        "detail": "ws_chat.router",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "pages.router",
+        "description": "pages.router",
+        "isExtraImport": true,
+        "detail": "pages.router",
         "documentation": {}
     },
     {
@@ -1624,7 +1664,7 @@
         "kind": 2,
         "importPath": "pages.router",
         "description": "pages.router",
-        "peekOfCode": "def get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})\n@router.get(\"/shops\")\ndef get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(\n        \"shops.html\", {\"request\": request, \"shops\": shops}\n    )",
+        "peekOfCode": "def get_base_template(request: Request):\n    return templates.TemplateResponse(\"base.html\", {\"request\": request})\n@router.get(\"/shops\")\ndef get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(\n        \"shops.html\", {\"request\": request, \"shops\": shops}\n    )\n@router.get(\"/chat\")",
         "detail": "pages.router",
         "documentation": {}
     },
@@ -1633,7 +1673,16 @@
         "kind": 2,
         "importPath": "pages.router",
         "description": "pages.router",
-        "peekOfCode": "def get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(\n        \"shops.html\", {\"request\": request, \"shops\": shops}\n    )",
+        "peekOfCode": "def get_shops_with_prods(\n    request: Request, shops: list[ShopAll] = Depends(get_all_shops_with_products)\n):\n    return templates.TemplateResponse(\n        \"shops.html\", {\"request\": request, \"shops\": shops}\n    )\n@router.get(\"/chat\")\ndef get_chat_page(request: Request):\n    return templates.TemplateResponse(\"chat.html\", {\"request\": request})\n# \t<img width=150 src=\"{{url_for('static', path='img_1.png')}}\" alt=\"img\" class=\"img_class\">",
+        "detail": "pages.router",
+        "documentation": {}
+    },
+    {
+        "label": "get_chat_page",
+        "kind": 2,
+        "importPath": "pages.router",
+        "description": "pages.router",
+        "peekOfCode": "def get_chat_page(request: Request):\n    return templates.TemplateResponse(\"chat.html\", {\"request\": request})\n# \t<img width=150 src=\"{{url_for('static', path='img_1.png')}}\" alt=\"img\" class=\"img_class\">",
         "detail": "pages.router",
         "documentation": {}
     },
@@ -1701,11 +1750,38 @@
         "documentation": {}
     },
     {
+        "label": "ConnectionManager",
+        "kind": 6,
+        "importPath": "ws_chat.router",
+        "description": "ws_chat.router",
+        "peekOfCode": "class ConnectionManager:\n    def __init__(self):\n        self.active_connections: list[WebSocket] = []\n    async def connect(self, websocket: WebSocket):\n        await websocket.accept()\n        self.active_connections.append(websocket)\n    def disconnect(self, websocket: WebSocket):\n        self.active_connections.remove(websocket)\n    async def send_personal_message(self, message: str, websocket: WebSocket):\n        await websocket.send_text(message)",
+        "detail": "ws_chat.router",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "ws_chat.router",
+        "description": "ws_chat.router",
+        "peekOfCode": "router = APIRouter(prefix=\"/chat\", tags=[\"Chat\"])\nclass ConnectionManager:\n    def __init__(self):\n        self.active_connections: list[WebSocket] = []\n    async def connect(self, websocket: WebSocket):\n        await websocket.accept()\n        self.active_connections.append(websocket)\n    def disconnect(self, websocket: WebSocket):\n        self.active_connections.remove(websocket)\n    async def send_personal_message(self, message: str, websocket: WebSocket):",
+        "detail": "ws_chat.router",
+        "documentation": {}
+    },
+    {
+        "label": "manager",
+        "kind": 5,
+        "importPath": "ws_chat.router",
+        "description": "ws_chat.router",
+        "peekOfCode": "manager = ConnectionManager()\n@router.websocket(\"/ws/{client_id}\")\nasync def websocket_endpoint(websocket: WebSocket, client_id: int):\n    await manager.connect(websocket)\n    try:\n        while True:\n            data = await websocket.receive_text()\n            await manager.broadcast(f\"Client #{client_id} says: {data}\")\n    except WebSocketDisconnect:\n        manager.disconnect(websocket)",
+        "detail": "ws_chat.router",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.mount(\n    \"/static\",\n    StaticFiles(directory=\"static\"),\n    name=\"static\",\n)\napp.include_router(api_v1_router)\napp.include_router(router_pages)\norigins = [\n    \"http://localhost.tiangolo.com\",",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City\", lifespan=lifespan)\napp.mount(\n    \"/static\",\n    StaticFiles(directory=\"static\"),\n    name=\"static\",\n)\napp.include_router(api_v1_router)\napp.include_router(router_pages)\napp.include_router(ws_router)\norigins = [",
         "detail": "main",
         "documentation": {}
     },

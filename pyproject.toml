@@ -13,6 +13,7 @@ alembic = "^1.13.1"
 sqlalchemy = {extras = ["asyncio"], version = "^2.0.30"}
 asyncpg = "^0.29.0"
 fastapi-cache2 = {extras = ["redis"], version = "^0.2.1"}
+websockets = "^12.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.2.2"
