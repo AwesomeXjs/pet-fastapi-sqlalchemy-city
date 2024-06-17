@@ -1833,7 +1833,7 @@
         "kind": 6,
         "importPath": "core.config",
         "description": "core.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    # DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    REDIS_HOST: str\n    REDIS_PORT: int\n    @property",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    # DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    REDIS_HOST: str\n    REDIS_PORT: int\n    SERVICE_DATABASE_URL: str",
         "detail": "core.config",
         "documentation": {}
     },
@@ -1860,7 +1860,7 @@
         "kind": 5,
         "importPath": "core.db_helper",
         "description": "core.db_helper",
-        "peekOfCode": "db_helper = DatabaseHelper(url=settings.get_db_url, echo=True)",
+        "peekOfCode": "db_helper = DatabaseHelper(url=settings.SERVICE_DATABASE_URL, echo=True)",
         "detail": "core.db_helper",
         "documentation": {}
     },

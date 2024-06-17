@@ -11,6 +11,7 @@ class Settings(BaseSettings):
 
     REDIS_HOST: str
     REDIS_PORT: int
+    SERVICE_DATABASE_URL: str
 
     @property
     def get_db_url(self):

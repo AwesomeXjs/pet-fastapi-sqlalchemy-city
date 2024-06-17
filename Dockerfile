@@ -1,17 +1,11 @@
-FROM python:3.12
+FROM python:3.11
 
 RUN mkdir /fastapi_app
 
 WORKDIR /fastapi_app
 
-COPY requirements.txt .
+COPY . /fastapi_app
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache -r requirements.txt
 
-COPY . .
-
-RUN chmod a+x docker/*.sh
-
-CMD gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000
-
-RUN alembic upgrade head
+CMD ["/bin/sh", "/app/start.sh"]
