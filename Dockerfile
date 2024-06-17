@@ -8,6 +8,4 @@ COPY . /fastapi_app
 
 RUN pip install --no-cache -r requirements.txt
 
-RUN sleep 3
-
 CMD gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000

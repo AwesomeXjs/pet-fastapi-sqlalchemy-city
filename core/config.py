@@ -1,3 +1,4 @@
+from ast import Str
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -8,6 +9,9 @@ class Settings(BaseSettings):
     DB_PASS: str
     DB_PORT: int
     DB_USER: str
+
+    REDIS_HOST = str
+    REDIS_PORT = int
 
     @property
     def get_db_url(self):

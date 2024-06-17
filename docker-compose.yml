@@ -8,7 +8,7 @@ services:
     expose:
       - 5435
     env_file:
-      - .env-non-dev
+      - .env
 
   redis:
     image: redis:7
