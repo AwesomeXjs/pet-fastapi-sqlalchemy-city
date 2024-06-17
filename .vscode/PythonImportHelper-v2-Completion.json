@@ -1875,7 +1875,7 @@
         "kind": 6,
         "importPath": "core.config",
         "description": "core.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    # DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    REDIS_HOST: str\n    REDIS_PORT: int\n    @property",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    REDIS_HOST: str\n    REDIS_PORT: int\n    @property",
         "detail": "core.config",
         "documentation": {}
     },
