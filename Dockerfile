@@ -8,4 +8,8 @@ COPY . /fastapi_app
 
 RUN pip install --no-cache -r requirements.txt
 
-CMD ["/bin/sh", "/app/start.sh"]
+RUN sleep 3
+
+RUN alembic upgrade head
+
+CMD gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000
