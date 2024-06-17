@@ -26,4 +26,4 @@ class DatabaseHelper:
             await sess.close()
 
 
-db_helper = DatabaseHelper(url=settings.SERVICE_DATABASE_URL, echo=True)
+db_helper = DatabaseHelper(url=settings.get_db_url, echo=True)
