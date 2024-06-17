@@ -4,11 +4,11 @@ RUN mkdir /fastapi_app
 
 WORKDIR /fastapi_app
 
-COPY requirements.txt /fastapi_app
+COPY requirements.txt .
 
-RUN pip install -r /fastapi_app/requirements.txt
+RUN pip install -r requirements.txt
 
-COPY . /fastapi_app
+COPY . .
 
 RUN python -m alembic upgrade head
 
