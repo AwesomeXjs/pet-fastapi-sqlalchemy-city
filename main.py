@@ -35,6 +35,7 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8000",
+    "https://aweso0mex.github.io/tech-magazine/",
 ]
 
 app.add_middleware(

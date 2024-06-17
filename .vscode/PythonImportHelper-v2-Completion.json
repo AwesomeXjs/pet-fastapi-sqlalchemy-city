@@ -2004,7 +2004,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "origins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,",
+        "peekOfCode": "origins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine/\",\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,",
         "detail": "main",
         "documentation": {}
     }
