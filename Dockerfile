@@ -1,16 +1,14 @@
-FROM python:3.11
+FROM python:3.11-slim
 
 RUN mkdir /fastapi_app
 
 WORKDIR /fastapi_app
 
-COPY requirements.txt .
+COPY requirements.txt /fastapi_app
 
-RUN pip install -r requirements.txt
+RUN pip install -r /fastapi_app/requirements.txt
 
-COPY . .
-
-RUN sleep 3
+COPY . /fastapi_app
 
 RUN python -m alembic upgrade head
 
