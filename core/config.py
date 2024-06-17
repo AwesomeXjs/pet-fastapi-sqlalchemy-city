@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     DB_PORT: int
     DB_USER: str
 
+    REDIS_HOST: str
+    REDIS_PORT: int
+
     @property
     def get_db_url(self):
         return f"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"

@@ -1459,15 +1459,6 @@
         "documentation": {}
     },
     {
-        "label": "uvicorn",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "uvicorn",
-        "description": "uvicorn",
-        "detail": "uvicorn",
-        "documentation": {}
-    },
-    {
         "label": "AsyncIterator",
         "importPath": "collections.abc",
         "description": "collections.abc",
@@ -1497,6 +1488,14 @@
         "description": "fastapi.middleware.cors",
         "isExtraImport": true,
         "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "core.config",
+        "description": "core.config",
+        "isExtraImport": true,
+        "detail": "core.config",
         "documentation": {}
     },
     {
@@ -1834,7 +1833,7 @@
         "kind": 6,
         "importPath": "core.config",
         "description": "core.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    @property\n    def get_db_url(self):\n        return f\"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}\"",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    REDIS_HOST: str\n    REDIS_PORT: int\n    @property",
         "detail": "core.config",
         "documentation": {}
     },

@@ -1,4 +1,3 @@
-import uvicorn
 from fastapi import FastAPI
 from redis import asyncio as aioredis
 from fastapi_cache import FastAPICache
@@ -8,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_cache.backends.redis import RedisBackend
 
+from core.config import settings
 from api_v1 import router as api_v1_router
 from ws_chat.router import router as ws_router
 from pages.router import router as router_pages
@@ -15,7 +15,7 @@ from pages.router import router as router_pages
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
-    redis = aioredis.from_url("redis://localhost")
+    redis = aioredis.from_url(f"redis://{settings.REDIS_HOST}:{settings.REDIS_PORT}")
     FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
     yield
 
@@ -57,12 +57,3 @@ app.add_middleware(
         "Authorization",
     ],
 )
-
-
-if __name__ == "__main__":
-    uvicorn.run(
-        "main:app",
-        host="localhost",
-        port=8000,
-        reload=True,
-    )
