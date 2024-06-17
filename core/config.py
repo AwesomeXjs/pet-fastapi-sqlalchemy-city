@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     DB_PORT: int
     DB_USER: str
 
-    REDIS_HOST = str
-    REDIS_PORT = int
+    REDIS_HOST: str
+    REDIS_PORT: int
 
     @property
     def get_db_url(self):

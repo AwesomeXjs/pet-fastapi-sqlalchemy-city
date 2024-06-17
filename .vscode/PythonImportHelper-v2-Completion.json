@@ -1796,7 +1796,7 @@
         "kind": 6,
         "importPath": "core.models.base",
         "description": "core.models.base",
-        "peekOfCode": "class Base(DeclarativeBase):\n    __abstract__ = True\n    @declared_attr.directive\n    def __tablename__(cls) -> str:\n        return f\"{cls.__name__.lower()}s\"\n    def __repr__(self) -> str:\n        cols = []\n        for col in self.__table__.columns.keys():\n            cols.append(f\"{col}:{getattr(self, col)}\")\n        return f\"<{self.__class__.__name__}{\",\".join(cols)}>\"",
+        "peekOfCode": "class Base(DeclarativeBase):\n    __abstract__ = True\n    @declared_attr.directive\n    def __tablename__(cls) -> str:\n        return f\"{cls.__name__.lower()}s\"\n    def __repr__(self) -> str:\n        cols = []\n        for col in self.__table__.columns.keys():\n            cols.append(f\"{col}:{getattr(self, col)}\")\n        return f\"<{self.__class__.__name__}{','.join(cols)}>\"",
         "detail": "core.models.base",
         "documentation": {}
     },
@@ -1841,7 +1841,7 @@
         "kind": 6,
         "importPath": "core.config",
         "description": "core.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    # DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    REDIS_HOST = str\n    REDIS_PORT = int\n    @property",
+        "peekOfCode": "class Settings(BaseSettings):\n    DB_HOST: str\n    DB_NAME: str\n    # DB_NAME_TEST: str\n    DB_PASS: str\n    DB_PORT: int\n    DB_USER: str\n    REDIS_HOST: str\n    REDIS_PORT: int\n    @property",
         "detail": "core.config",
         "documentation": {}
     },
